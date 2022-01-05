@@ -60,3 +60,33 @@ package interversexec is
       end record;
 
 end interversexec;
+
+
+--    -- SAVE RAFFINAGE
+--    
+--    R0: Interpréter un code en langage intermédiaire.
+--    
+--    R1: Comment "Interpréter un code en langage intermédiaire" ?
+--    -- R1.1: Traiter le bloc de déclaration des variables.
+--       |-- R2.1: Localiser la partie du code souhaitée.
+--       |   | -- R3.1: Trouver la ligne Commençant par "Programme", quitter R1.1 lorsque l'on trouve la ligne "Début".
+--       |   |
+--       |-- R2.2: Traiter le code ligne par ligne.
+--       |   |-- R3.1: Pour chaque ligne créer un tableau.
+--       |   |   |-- R4.1: Séparer les variables
+--       |   |   |    #Les variables seront renseignées dans un tableau à partir de la case 1
+--       |   |
+--       |   |   |-- R4.2: Interpréter le type de variable
+--       |   |   |   #On mettra le type de la variable en case 0 du tableau
+--    
+--    
+--    -- R1.2: Traiter le bloc principal du programme
+--       |-- R2.1: Localiser la partie du code souhaitée.
+--       |   |-- R3.1: Sauter la ligne début, s'arrếter lorsque l'on trouve "Fin".
+--       |
+--       |-- R2.2: Traiter le code ligne par ligne.
+--       |   |-- R3.1: Mettre chaque éléments d'une ligne (séparés par un espace) dans un tableau.
+--       |   |
+--       |   |-- R3.2: Parcourir le tableau pour trouver l'action à effectuer dans cette ligne.
+--       |   |
+--       |   |-- R3.3: Effectuer l'action    
