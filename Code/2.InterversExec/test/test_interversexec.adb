@@ -7,13 +7,14 @@ with interVersExec; use interVersExec;
 
 procedure tests is
     -- Packages de généricité (pour tableaux)
-    package entiers is new exo1(Tableau_Element=> Tab_Entier,image => Tab_Entier'Image);
+    package entiers is new exo1(Element=> Integer,image => Integer'Image);
     use entiers;
 
-    package booleens is new exo1(Tableau_Element=> Tab_Booleens,image => Tab_Booleens'Image);
+    package booleens is new exo1(Element=> Boolean,image => Boolean'Image);
     use booleens;
     --Fin packages de généricité (pour tableaux)
 
 begin
+
 
 end tests;
