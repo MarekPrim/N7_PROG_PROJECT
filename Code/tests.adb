@@ -12,7 +12,7 @@ procedure tests is
 
     package booleens is new exo1(Tableau_Element=> Tab_Booleens,image => Tab_Booleens'Image);
     use booleens;
-    --Fin pacakges de généricité (pour tableaux)
+    --Fin packages de généricité (pour tableaux)
 
 begin
 
