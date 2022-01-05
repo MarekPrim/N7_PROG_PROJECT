@@ -41,9 +41,9 @@ package interVersExec is
    procedure blocPrincipal(code_intermediaire : in File_Type);
 
    private
-      Type Cellule;
-      type liste is access Cellule;
-      type Cellule is record
+      Type T_Variables;
+      type index is access T_Variables;
+      type T_Variables is record
          type : String;
          tab : Tableau_Element;
       end record;
