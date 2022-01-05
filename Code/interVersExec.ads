@@ -6,6 +6,7 @@ package interVersExec is
    Vide : exception;
 
    --procedure intermediaire2execution
+   --R1: Comment "Interpréter un code en langage intermédiaire" ?
    --semantique: A partir d'un fichier en entree ecrit en code source, execute le programme sur la machine.
    --parametres: nom : code_intermediaire    type :  Fichier     flux : entree
    --pre-condition: aucune
@@ -15,6 +16,7 @@ package interVersExec is
    procedure intermediaire2execution(code_intermediaire : in File_Type);
 
    --procedure declarationVariables (NOM A CHANGER)
+   --R1.1: Traiter le bloc de déclaration des variables.
    --semantique: A partir d'un fichier en entree ecrit en code source, traite le bloc de déclaration des variables.
    --parametres: nom : code_intermediaire    type :  Fichier     flux : entree
    --pre-condition: XXXXXXX
@@ -23,7 +25,8 @@ package interVersExec is
    --           Fichier en entree vide
    procedure declarationVariables(code_intermediaire : in File_Type);
 
-      --procedure blocPrincipal (NOM A CHANGER)
+   --procedure blocPrincipal (NOM A CHANGER)
+   --R1.2: Traiter le bloc principal du programme
    --semantique: A partir d'un fichier en entree ecrit en code source, traite le bloc principal du programme.
    --parametres: nom : code_intermediaire    type :  Fichier     flux : entree
    --pre-condition: XXXXXXX

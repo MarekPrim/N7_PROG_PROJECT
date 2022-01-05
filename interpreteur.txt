@@ -58,7 +58,7 @@ R3: Comment "Identifier l'action effectuée par chaque ligne et traiter les diff
 R0: Interpréter un code en langage intermédiaire.
 
 R1: Comment "Interpréter un code en langage intermédiaire" ?
--- R1.1: Traiter le bloc de code "avant début".
+-- R1.1: Traiter le bloc de déclaration des variables.
    |-- R2.1: Localiser la partie du code souhaitée.
    |   | -- R3.1: Trouver la ligne Commençant par "Programme", quitter R1.1 lorsque l'on trouve la ligne "Début".
    |   |
@@ -71,7 +71,7 @@ R1: Comment "Interpréter un code en langage intermédiaire" ?
    |   |   |   #On mettra le type de la variable en case 0 du tableau
 
 
--- R1.2: Traiter le bloc de code "entre début et fin"
+-- R1.2: Traiter le bloc principal du programme
    |-- R2.1: Localiser la partie du code souhaitée.
    |   |-- R3.1: Sauter la ligne début, s'arrếter lorsque l'on trouve "Fin".
    |
