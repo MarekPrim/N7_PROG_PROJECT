@@ -1,4 +1,4 @@
--- PERRIN Camille, TP8 exo1
+-- XXXX
 package sourceVersInter is
    
    --type liste is access Integer;
