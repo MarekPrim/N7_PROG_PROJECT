@@ -14,6 +14,8 @@ package interVersExec is
    --           Fichier en entree vide
    procedure intermediaire2execution(code_intermediaire : in File_Type);
 
+   procedure avantDebut(code_intermediaire : in File_Type);
+
    private
       Type T_Noeud; 
 
