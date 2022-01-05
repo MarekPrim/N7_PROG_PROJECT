@@ -2,7 +2,7 @@
 with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 with ada.Text_IO; use ada.Text_IO;
 
-package body interVersExec is
+package body interversexec is
 
    procedure intermediaire2execution(code_intermediaire : in File_Type) is
    begin
@@ -21,4 +21,4 @@ package body interVersExec is
     end blocPrincipal;
 
 
-end interVersExec;
+end interversexec;

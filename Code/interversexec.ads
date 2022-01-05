@@ -4,7 +4,7 @@ generic
    Type Tab_Entier is array(1..100) of Integer; --Cas valeurs entières
    Type Tab_Booleens is array(1..100) of boolean; --Cas de valeurs booleennes
    with function image(Item : in Tableau_Element) return String; 
-package interVersExec is
+package interversexec is
    
    --type liste is access Integer;
    Type XXX is private;
@@ -48,4 +48,4 @@ package interVersExec is
          tab : Tableau_Element;
       end record;
 
-end interVersExec;
+end interversexec;
