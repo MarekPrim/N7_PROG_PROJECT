@@ -2,7 +2,7 @@
 package interVersExec is
    
    --type liste is access Integer;
-   Type T_AB is private;
+   Type XXX is private;
    Vide : exception;
 
    --procedure intermediaire2execution
@@ -33,6 +33,6 @@ package interVersExec is
    procedure blocPrincipal(code_intermediaire : in File_Type);
 
    private
-      Type T_Noeud; 
+      Type XXX; 
 
 end interVersExec;

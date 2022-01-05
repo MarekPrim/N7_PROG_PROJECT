@@ -10,5 +10,15 @@ package body code is
         blocPrincipal(code_intermediaire);
    end intermediaire2execution;
 
+   procedure declarationVariables(code_intermediaire : in File_Type) is
+   begin
+        null;
+   end declarationVariables;
+
+    procedure blocPrincipal(code_intermediaire : in File_Type) is
+    begin
+        null;
+    end blocPrincipal;
+
 
 end code;
