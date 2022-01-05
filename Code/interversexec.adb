@@ -1,7 +1,4 @@
 -- XXXX
-with ada.Integer_Text_IO; use ada.Integer_Text_IO;
-with ada.Text_IO; use ada.Text_IO;
-
 package body interversexec is
 
    procedure intermediaire2execution(code_intermediaire : in File_Type) is

@@ -1,13 +1,15 @@
 -- XXXX
+with ada.Integer_Text_IO; use ada.Integer_Text_IO;
+with ada.Text_IO; use ada.Text_IO;
+
 generic
    type Tableau_Element is private;
-   Type Tab_Entier is array(1..100) of Integer; --Cas valeurs entières
-   Type Tab_Booleens is array(1..100) of boolean; --Cas de valeurs booleennes
    with function image(Item : in Tableau_Element) return String; 
 package interversexec is
    
-   --type liste is access Integer;
-   Type XXX is private;
+   Type index is private;
+   Type Tab_Entier is array(1..100) of Integer; --Cas valeurs entières
+   Type Tab_Booleens is array(1..100) of boolean; --Cas de valeurs booleennes
    Vide : exception;
 
    --procedure intermediaire2execution
@@ -44,7 +46,7 @@ package interversexec is
       Type T_Variables;
       type index is access T_Variables;
       type T_Variables is record
-         type : String;
+         types : Character;
          tab : Tableau_Element;
       end record;
 
