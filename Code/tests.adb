@@ -6,11 +6,13 @@ with interVersExec; use interVersExec;
 -- R0
 
 procedure tests is
+    -- Packages de généricité (pour tableaux)
     package entiers is new exo1(Tableau_Element=> Tab_Entier,image => Tab_Entier'Image);
     use entiers;
 
     package booleens is new exo1(Tableau_Element=> Tab_Booleens,image => Tab_Booleens'Image);
     use booleens;
+    --Fin pacakges de généricité (pour tableaux)
 
 begin
 

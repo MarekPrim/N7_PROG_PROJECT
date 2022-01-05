@@ -1,16 +1,20 @@
 -- XXXX
-with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 with ada.Text_IO; use ada.Text_IO;
+with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 
 generic
-   type Tableau_Element is private;
+   type Tableau_Element is private; --Sera un tableau d'entiers ou de booleens
    with function image(Item : in Tableau_Element) return String; 
+
 package interversexec is
-   
+
    Type index is private;
-   Type Tab_Entier is array(1..100) of Integer; --Cas valeurs entières
-   Type Tab_Booleens is array(1..100) of boolean; --Cas de valeurs booleennes
-   Vide : exception;
+   Type Tab_Entier is private;
+   Type Tab_Booleens is private;
+
+   -- Exceptions
+   Vide : exception; 
+   -- Fin exceptions
 
    --procedure intermediaire2execution
    --R1: Comment "Interpréter un code en langage intermédiaire" ?
@@ -43,10 +47,15 @@ package interversexec is
    procedure blocPrincipal(code_intermediaire : in File_Type);
 
    private
+      Type Tab_Entier is array(1..100) of Integer; --Tableau de valeurs entières
+      Type Tab_Booleens is array(1..100) of boolean; --Tableau de valeurs booleennes
+
+      type String is array(1..30) of Character;
+
       Type T_Variables;
       type index is access T_Variables;
       type T_Variables is record
-         types : Character;
+         types : String;
          tab : Tableau_Element;
       end record;
 
