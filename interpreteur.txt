@@ -57,24 +57,21 @@ R3: Comment "Identifier l'action effectuée par chaque ligne et traiter les diff
 
 R0: Interpréter un code en langage intermédiaire.
 
-R1: Comment "Interpréter un code en langage intermédiaire." ?
--- Traiter le bloc de déclaration des variables.
--- Traiter le bloc principal du programme
+#R1: Comment "Interpréter un code en langage intermédiaire." ?
+#-- Traiter le bloc de déclaration des variables.
+#-- Traiter le bloc principal du programme
 
 R2: Comment "Traiter le bloc de déclaration des variables" ?
 -- Trouver le début de la déclaration du programme.
--- Trouver et traiter les variables
+-- Trouver et classer les variables dans des tableaux spécifiques à leur type.
 R2: Comment "Traiter le bloc principal du programme" ?
 -- Trouver le début du programme.
 -- Identifier l'action effectuée par chaque ligne et traiter les différents cas.
 -- Trouver la fin du programme.
 
-R3: Comment "Trouver et traiter les variables" ?
--- Identifier les différentes variables
--- Les renseigner dans un tableau spécifique à leur type
 R3: Comment "Identifier l'action effectuée par chaque ligne et traiter les différents cas" ?
--- Traiter les affectations
--- Traiter les "Tant que"
+#-- Traiter les affectations
+#-- Traiter les "Tant que"
 
 
 
