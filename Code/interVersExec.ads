@@ -1,4 +1,9 @@
 -- XXXX
+generic
+   type Tableau_Element is private;
+   Type Tab_Entier is array(1..100) of Integer; --Cas valeurs entières
+   Type Tab_Booleens is array(1..100) of boolean; --Cas de valeurs booleennes
+   with function image(Item : in Tableau_Element) return String; 
 package interVersExec is
    
    --type liste is access Integer;
@@ -36,6 +41,11 @@ package interVersExec is
    procedure blocPrincipal(code_intermediaire : in File_Type);
 
    private
-      Type XXX; 
+      Type Cellule;
+      type liste is access Cellule;
+      type Cellule is record
+         type : String;
+         tab : Tableau_Element;
+      end record;
 
 end interVersExec;
