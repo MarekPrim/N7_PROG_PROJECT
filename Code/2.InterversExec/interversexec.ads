@@ -64,7 +64,7 @@ package interversexec is
    --pre-condition: XXXXXXX
    --post-condition: XXXXXXX
    --exception: XXXXXXX
-   procedure TantQue();
+   procedure tantQue();
 
    private
       -- Types de tableaux pour généricité
