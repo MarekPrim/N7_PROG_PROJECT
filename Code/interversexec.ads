@@ -47,11 +47,14 @@ package interversexec is
    procedure blocPrincipal(code_intermediaire : in File_Type);
 
    private
+      -- Types de tableaux pour généricité
       Type Tab_Entier is array(1..100) of Integer; --Tableau de valeurs entières
       Type Tab_Booleens is array(1..100) of boolean; --Tableau de valeurs booleennes
 
+      -- Le string "types" est le nom du type souhaité, soit une chaine de charactères
       type String is array(1..30) of Character;
 
+      -- Rassemblement d'un tableau de valeurs avec le nom de son type
       Type T_Variables;
       type index is access T_Variables;
       type T_Variables is record
