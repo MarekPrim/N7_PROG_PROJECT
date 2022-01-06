@@ -79,15 +79,15 @@ package interversexec is
          tab : Tableau_Cellule;
       end record;
 
-      -- Un tableau de cellules contient toutes les variables d'un même type
-      Type Tableau_Cellule is array(1..100) of Cellule;
-
       -- Une cellule contient une variable
       Type Celulle;
       type Cellule is record
          nom : String;
          valeur : Element;
       end record;
+
+      -- Un tableau de cellules contient toutes les variables d'un même type
+      Type Tableau_Cellule is array(1..100) of Cellule;
 
 
 
