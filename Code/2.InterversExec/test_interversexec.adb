@@ -18,15 +18,13 @@ procedure test_interversexec is
 
 begin
 
-    Put_Line ("Coucou");
-
-
     --***** test affectation ******
-
+    Put_Line ("Test d'affectation : ");
     --affectation();
+    New_Line;
 
     --***** test TantQue *****
-
+    Put_Line ("Test d'affectation : ");
     --TantQue();
 
     --***** test BlocDeclaration *****
