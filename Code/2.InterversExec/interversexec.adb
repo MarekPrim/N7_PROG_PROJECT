@@ -7,7 +7,7 @@ package body interversexec is
         blocPrincipal(code_intermediaire);
    end intermediaire2execution;
 
-   procedure declarationVariables(code_intermediaire : in File_Type) is
+   procedure blocDeclaration(code_intermediaire : in File_Type) is
 
      tab_cell_entier : Tableau_Cellule;
      tab_entier : T_Variables := ("entier",tab_cell_entier);
@@ -16,11 +16,25 @@ package body interversexec is
 
      null;
 
-   end declarationVariables;
+   end blocDeclaration;
 
     procedure blocPrincipal(code_intermediaire : in File_Type) is
     begin
         null;
     end blocPrincipal;
+
+    procedure affectation(ligne: in String) is
+
+    begin -- affectation
+
+      null;
+
+    end affectation;
+
+    procedure tantQue is
+
+    begin -- tantQue
+
+    end tantQue;
 
 end interversexec;
