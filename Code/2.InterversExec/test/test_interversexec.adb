@@ -1,7 +1,7 @@
 -- XXXX
-with ada.Integer_Text_IO; use ada.Integer_Text_IO;
-with ada.Text_IO; use ada.Text_IO;
-with interVersExec; use interVersExec;
+with ada.Integer_Text_IO ; use ada.Integer_Text_IO;
+with ada.Text_IO ; use ada.Text_IO;
+with interVersExec ; use interVersExec;
 --with sourceVersInter; use sourceVersInter;
 -- R0
 
@@ -14,10 +14,32 @@ procedure tests is
     use booleens;
     --Fin packages de généricité (pour tableaux)
 
+    
+
 begin
 
-    Put_Line ("");
-    
+    --Put_Line ("");
+
+
+    --***** test affectation ******
+
+    --affectation();
+
+    --***** test TantQue *****
+
+    --TantQue();
+
+    --***** test BlocDeclaration *****
+
+    BlocDeclaration();
+
+    --***** test BlocPrincipal *****
+
+    --BlocPrincipal();
+
+    --***** test intermediaire2execution *****
+
+
 
 
 
