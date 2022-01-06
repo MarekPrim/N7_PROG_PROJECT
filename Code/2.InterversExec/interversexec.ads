@@ -65,7 +65,7 @@ package interversexec is
    --pre-condition: XXXXXXX
    --post-condition: XXXXXXX
    --exception: XXXXXXX
-   procedure tantQue();
+   --procedure tantQue();
 
    private
       -- Le string "types" est le nom du type souhaité ou le nom de la variable, soit une chaine de charactères
