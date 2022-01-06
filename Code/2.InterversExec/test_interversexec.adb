@@ -18,7 +18,7 @@ procedure tests is
 
 begin
 
-    --Put_Line ("");
+    Put_Line ("Coucou");
 
 
     --***** test affectation ******
@@ -31,7 +31,7 @@ begin
 
     --***** test BlocDeclaration *****
 
-    BlocDeclaration();
+    --BlocDeclaration();
 
     --***** test BlocPrincipal *****
 
