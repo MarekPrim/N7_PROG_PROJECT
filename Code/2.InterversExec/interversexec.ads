@@ -9,7 +9,7 @@ generic
 package interversexec is
 
    Type index is private;
-   Type Tableau_Element is private;
+   Type Tableau_Cellule is private;
    --Type Tab_Entier is private; ##A ENLEVER
    --Type Tab_Booleens is private; ##A ENLEVER
 
@@ -55,7 +55,8 @@ package interversexec is
    --pre-condition: XXXXXXX
    --post-condition: nouvelle_valeur est affecté à variable
    --exception: La nouvelle valeur ne correspond pas au type de la variable
-   procedure affection(variable : in out Element; nouvelle_valeur : in String);
+   procedure affection(ligne : in String);
+   --procedure affection(variable : in out Element; nouvelle_valeur : in String);
 
    --procedure TantQue
    --Comment R1.2 : R2.2: Traiter une boucle Tant Que comprise dans le bloc principal
@@ -67,21 +68,28 @@ package interversexec is
    procedure tantQue();
 
    private
-      -- Types de tableaux pour généricité
-      Type Tab_Entier is array(1..100) of Integer; --Tableau de valeurs entières
-      Type Tab_Booleens is array(1..100) of boolean; --Tableau de valeurs booleennes
-
-      -- Le string "types" est le nom du type souhaité, soit une chaine de charactères
+      -- Le string "types" est le nom du type souhaité ou le nom de la variable, soit une chaine de charactères
       Type String is array(1..30) of Character;
-      Type Tableau_Element is array(1..100) of Element;
 
       -- Rassemblement d'un tableau de valeurs avec le nom de son type
       Type T_Variables;
       type index is access T_Variables;
       type T_Variables is record
          types : String;
-         tab : Tableau_Element;
+         tab : Tableau_Cellule;
       end record;
+
+      -- Un tableau de cellules contient toutes les variables d'un même type
+      Type Tableau_Cellule is array(1..100) of Cellule;
+
+      -- Une cellule contient une variable
+      Type Celulle;
+      type Cellule is record
+         nom : String;
+         valeur : Element;
+      end record;
+
+
 
 end interversexec;
 
