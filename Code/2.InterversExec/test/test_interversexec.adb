@@ -17,7 +17,27 @@ procedure tests is
 begin
 
     Put_Line ("");
-    
+
+
+    --***** test affectation ******
+
+    affectation();
+
+    --***** test TantQue *****
+
+    TantQue();
+
+    --***** test BlocDeclaration *****
+
+    BlocDeclaration();
+
+    --***** test BlocPrincipal *****
+
+    BlocPrincipal();
+
+    --***** test intermediaire2execution *****
+
+
 
 
 
