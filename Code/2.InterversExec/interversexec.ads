@@ -55,7 +55,7 @@ package interversexec is
    --pre-condition: XXXXXXX
    --post-condition: nouvelle_valeur est affecté à variable
    --exception: La nouvelle valeur ne correspond pas au type de la variable
-   procedure affection(ligne : in String);
+   procedure affectation(ligne : in String);
    --procedure affection(variable : in out Element; nouvelle_valeur : in String);
 
    --procedure TantQue
