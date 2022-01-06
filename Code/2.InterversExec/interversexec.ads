@@ -73,7 +73,7 @@ package interversexec is
 
       -- Rassemblement d'un tableau de valeurs avec le nom de son type
       Type T_Variables;
-      type index is access T_Variables;
+      --type index is access T_Variables;
       type T_Variables is record
          types : String;
          tab : Tableau_Cellule;
