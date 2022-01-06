@@ -1,10 +1,10 @@
 -- XXXX
-with ada.Text_IO; use ada.Text_IO;
-with ada.Integer_Text_IO; use ada.Integer_Text_IO;
+WITH ada.Text_IO ; USE ada.Text_IO;
+WITH ada.Integer_Text_IO ; USE ada.Integer_Text_IO;
 
 generic
    type Element is private; --Sera des entiers ou des booleens
-   with function image(Item : in Element) return String; 
+   with function image(Item : in Element) return String;
 
 package interversexec is
 
@@ -14,7 +14,7 @@ package interversexec is
    --Type Tab_Booleens is private; ##A ENLEVER
 
    -- Exceptions
-   Vide : exception; 
+   Vide : exception;
    -- Fin exceptions
 
    --procedure intermediaire2execution
@@ -87,9 +87,9 @@ end interversexec;
 
 
 --    -- SAVE RAFFINAGE
---    
+--
 --    R0: Interpréter un code en langage intermédiaire.
---    
+--
 --    R1: Comment "Interpréter un code en langage intermédiaire" ?
 --    -- R1.1: Traiter le bloc de déclaration des variables.
 --       |-- R2.1: Localiser la partie du code souhaitée.
@@ -102,8 +102,8 @@ end interversexec;
 --       |   |
 --       |   |   |-- R4.2: Interpréter le type de variable
 --       |   |   |   #On mettra le type de la variable en case 0 du tableau
---    
---    
+--
+--
 --    -- R1.2: Traiter le bloc principal du programme
 --       |-- R2.1: Localiser la partie du code souhaitée.
 --       |   |-- R3.1: Sauter la ligne début, s'arrếter lorsque l'on trouve "Fin".
@@ -113,4 +113,4 @@ end interversexec;
 --       |   |
 --       |   |-- R3.2: Parcourir le tableau pour trouver l'action à effectuer dans cette ligne.
 --       |   |
---       |   |-- R3.3: Effectuer l'action    
+--       |   |-- R3.3: Effectuer l'action
