@@ -72,7 +72,7 @@ package interversexec is
       Type String is array(1..30) of Character;
 
       -- Une cellule contient une variable
-      Type Celulle;
+      Type Cellule;
       type Cellule is record
          nom : String;
          valeur : Element;
