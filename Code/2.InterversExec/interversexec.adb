@@ -8,8 +8,14 @@ package body interversexec is
    end intermediaire2execution;
 
    procedure declarationVariables(code_intermediaire : in File_Type) is
+
+     tab_cell_entier : Tableau_Cellule;
+     tab_entier : T_Variables := ("entier",tab_cell_entier);
+
    begin
-        null;
+
+     null;
+
    end declarationVariables;
 
     procedure blocPrincipal(code_intermediaire : in File_Type) is
