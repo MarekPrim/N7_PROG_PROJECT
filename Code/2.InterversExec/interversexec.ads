@@ -71,14 +71,6 @@ package interversexec is
       -- Le string "types" est le nom du type souhaité ou le nom de la variable, soit une chaine de charactères
       Type String is array(1..30) of Character;
 
-      -- Rassemblement d'un tableau de valeurs avec le nom de son type
-      Type T_Variables;
-      --type index is access T_Variables;
-      type T_Variables is record
-         types : String;
-         tab : Tableau_Cellule;
-      end record;
-
       -- Une cellule contient une variable
       Type Celulle;
       type Cellule is record
@@ -88,6 +80,14 @@ package interversexec is
 
       -- Un tableau de cellules contient toutes les variables d'un même type
       Type Tableau_Cellule is array(1..100) of Cellule;
+
+      -- Rassemblement d'un tableau de valeurs avec le nom de son type
+      Type T_Variables;
+      --type index is access T_Variables;
+      type T_Variables is record
+         types : String;
+         tab : Tableau_Cellule;
+      end record;
 
 
 
