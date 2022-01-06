@@ -5,22 +5,15 @@ P ZX
 
 RN
 RV NO_IO
-RV NO_IMPLICIT_CONDITIONALS
 RV NO_SECONDARY_STACK
+RV NO_DEFAULT_INITIALIZATION
 RV SPARK_05
 
-U test_interversexec%b	test_interversexec.adb	cee72a2a NE OO SU IL
+U test%b		test.adb		d3454460 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
-Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W interversexec%s	interversexec.adb	interversexec.ali
-Z system%s		system.ads		system.ali
-Z system.exception_table%s  s-exctab.adb	s-exctab.ali
-Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
-Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
 D ada.ads		20200312110721 76789da1 ada%s
 D a-except.ads		20200312110721 291912d5 ada.exceptions%s
@@ -33,14 +26,10 @@ D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D interversexec.ads	20220106075426 7a95da10 interversexec%s
-D interversexec.adb	20220106081354 149aa4ae interversexec%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200312110721 54135002 system.exception_table%s
 D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
-D s-imgboo.ads		20200312110721 f5d971eb system.img_bool%s
-D s-imgint.ads		20200312110721 02dbe0c2 system.img_int%s
 D s-parame.ads		20200312110721 48ec542b system.parameters%s
 D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
 D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
@@ -50,20 +39,26 @@ D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
 D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
-D test_interversexec.adb  20220106081032 ca24cac4 test_interversexec%b
+D test.adb		20220106090134 ad137e9e test%b
 X 1 ada.ads
-16K9*Ada 20e8 29|2r6 2r32 3r6 3r24
+16K9*Ada 20e8 25|2r6 2r24 3r6 3r32
 X 3 a-inteio.ads
-18K13*Integer_Text_IO[8|46] 29|2w10 2r36
+18K13*Integer_Text_IO[8|46] 25|3w10 3r36
 X 7 a-textio.ads
-49K13*Text_IO 471e16 29|3w10 3r28
-263U14*Put_Line 29|21s5
-X 12 interversexec.ads
-6+9 Element 29|10r42 13r43
-7V18 image{string} 29|10r60 13r61
-9k9*interversexec 95e18 29|4w6 10r28 13r29
-X 29 test_interversexec.adb
-8U11*test_interversexec 8b11 46l5 46t23
-10K13 entiers[12|9] 11r9
-13K13 booleens[12|9] 14r9
+49K13*Text_IO 471e16 25|2w10 2r28
+52P9*File_Type 25|8r13
+53n23*In_File{53E9} 25|14r16
+64I9*Count<integer>
+68I12*Positive_Count{64I9} 25|10r7
+92U14*Open 25|14s3
+166U14*New_Line 25|18s3 21s3 24s3
+189U14*Set_Line 25|16s3 20s3 23s3
+195V13*Line{68I12} 25|17s8
+242U14*Put 25|15s3 19s3 22s3 25s3
+253V13*Get_Line{string} 25|15s7 19s7 22s7 25s7
+X 25 test.adb
+6U11*test 6b11 29l5 29t9
+8p3 My_file{7|52P9} 14m8 14r8 15r16 16r12 17r13 19r16 20r12 22r16 23r12 25r16
+9a3 a{string}
+10i3 b{7|68I12} 17m3 23r20
 

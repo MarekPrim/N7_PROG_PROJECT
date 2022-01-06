@@ -6,7 +6,7 @@ RN
 RV NO_IO
 RV SPARK_05
 
-U interversexec%b	interversexec.adb	3803050a NE OO PK GE IL
+U interversexec%b	interversexec.adb	6e0f7ebe NE OO PK GE IL
 
 U interversexec%s	interversexec.ads	04c3e0ee BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
@@ -25,7 +25,7 @@ D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
 D interversexec.ads	20220106075426 7a95da10 interversexec%s
-D interversexec.adb	20220106074840 4296df1a interversexec%b
+D interversexec.adb	20220106081354 149aa4ae interversexec%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200312110721 54135002 system.exception_table%s
@@ -52,7 +52,7 @@ X 12 interversexec.ads
 7*24 Item{6+9}
 9k9*interversexec 6z9 7z18 73E12 95l5 95e18 13|2b14 44l5 44t18
 12A9*String(character) 59r37 73c12 78r16 89r18 13|26r38 28r11
-13A9*Tableau_Cellule(77R12) 83c12 90r16
+13A9*Tableau_Cellule(77R12) 83c12 90r16 13|12r24
 18X4*Vide
 29U14*intermediaire2execution 29>38 13|4b14 8l8 8t31
 29p38 code_intermediaire{7|52P9} 13|4b38 6r25 7r23
@@ -67,9 +67,12 @@ X 12 interversexec.ads
 77R12 Cellule
 78a10 nom{12A9}
 79*10 valeur{6+9}
-86R12 T_Variables 88c12 91e17
+86R12 T_Variables 88c12 91e17 13|13r19
+88R12 T_Variables
 89a10 types{12A9}
 90a10 tab{13A9}
 X 13 interversexec.adb
+12a6 tab_cell_entier{12|13A9} 13r44
+13r6 tab_entier{12|88R12}
 28a7 a{12|12A9}
 
