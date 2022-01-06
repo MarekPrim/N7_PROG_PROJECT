@@ -5,7 +5,7 @@ with interVersExec ;
 --with sourceVersInter; use sourceVersInter;
 -- R0
 
-procedure test_interversexec is
+procedure test_tantque_02 is
     -- Packages de généricité (pour tableaux)
     package entiers is new interversexec(Element=> Integer,image => Integer'Image);
     use entiers;
@@ -17,30 +17,18 @@ procedure test_interversexec is
     
 
 begin
+Put_line("");
+New_Line;
 
-    Put_Line ("Coucou");
-
-
-    --***** test affectation ******
-
-    --affectation();
-
-    --***** test TantQue *****
-
-    --TantQue();
-
-    --***** test BlocDeclaration *****
-
-    --BlocDeclaration();
-
-    --***** test BlocPrincipal *****
-
-    --BlocPrincipal();
-
-    --***** test intermediaire2execution *****
+    --***** Tests de la procédure TantQue *****
+    New_Line;
+    Put_Line ("Test de la procédure TantQue : ");
+    New_Line;
 
 
+    --TantQue;
 
 
+    --***** Fin tests de la procédure affectation ******
 
-end test_interversexec;
+end test_tantque_02;
