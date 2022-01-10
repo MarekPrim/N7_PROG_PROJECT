@@ -8,12 +8,12 @@ generic
 
 package interversexec is
 
-   --Type index is private;
-   Type String is private;
-   Type Tableau_Cellule is private;
-   Type T_Variables is private;
-   --Type Tab_Entier is private; ##A ENLEVER
-   --Type Tab_Booleens is private; ##A ENLEVER
+   --Type String is private;
+   Type Tableau_Variables is private;
+   Type Cellule is private;
+
+   --Type Tab_Entier is private;
+   --Type Tab_Booleens is private;
 
    -- Exceptions
    Vide : exception;
@@ -81,8 +81,6 @@ package interversexec is
          nom : String;
          valeur : Element;
       end record;
-
-
 
 end interversexec;
 
