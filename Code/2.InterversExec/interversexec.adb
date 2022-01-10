@@ -14,7 +14,7 @@ package body interversexec is
    begin
      --tab_cell_entier : Tableau_Cellule;
      --tab_entier : T_Variables := ("entier",tab_cell_entier);
-    Open(File,In_File,"truc.txt");
+    Open(File,In_File,"./test_files/test_01_file");
                -- on ouvre le fichier de nom truc.txt
                -- dans le programme on l'appelle File
      while not End_Of_File(File) loop
