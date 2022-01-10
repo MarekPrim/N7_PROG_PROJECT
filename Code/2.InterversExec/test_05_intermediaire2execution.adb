@@ -5,7 +5,7 @@ with interVersExec;
 --with sourceVersInter; use sourceVersInter;
 -- R0
 
-procedure test_affectation_01 is
+procedure test_05_intermediaire2execution is
     -- Packages de généricité (pour tableaux)
     package entiers is new interversexec(Element=> Integer,image => Integer'Image);
     use entiers;
@@ -13,18 +13,19 @@ procedure test_affectation_01 is
     package booleens is new interversexec(Element=> Boolean,image => Boolean'Image);
     use booleens;
     --Fin packages de généricité (pour tableaux)
-
     
-
 begin
 Put_line("");
 New_Line;
 
 
-    --***** test Tests de la procédure BlocPrincipal *****
+    --***** test Tests de la procédure intermediaire2execution *****
+    Put_Line ("Tests de la procédure intermediaire2execution : ");
+    New_Line;
 
-    --BlocPrincipal();
+    --
+    --intermediaire2execution();
 
-    --***** Fin tests de la procédure BlocPrincipal ******
+    --***** Fin tests de la procédure intermediaire2execution ******
 
-end test_affectation_01;
+end test_05_intermediaire2execution;
