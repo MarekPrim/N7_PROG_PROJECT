@@ -20,14 +20,11 @@ begin
 Put_line("");
 New_Line;
 
-    --***** test Tests de la procédure BlocDeclaration *****
 
-    --BlocDeclaration();
-
-    --***** test BlocPrincipal *****
+    --***** test Tests de la procédure BlocPrincipal *****
 
     --BlocPrincipal();
 
-    --***** test intermediaire2execution *****
+    --***** Fin tests de la procédure BlocPrincipal ******
 
 end test_affectation_01;
