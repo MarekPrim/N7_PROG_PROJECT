@@ -14,7 +14,7 @@ procedure test_02_affectation is
     use booleens;
     --Fin packages de généricité (pour tableaux)
 
-    pommes : integer := 0; --variable du test pour simplifier la lecture
+    fichier_test : File_Type;
 
 begin
 
@@ -22,8 +22,8 @@ begin
     Put_Line ("Tests de la procédure affectation : ");
     New_Line;
 
-    -- Affection d'un entier à un entier : REUSSITE ATTENDUE    
-    Put_line("On affecte le nombre 5 à un entier nommé 'pommes' (pommes <- 5). (doit réussir");
+    -- Affectation d'un entier à un entier : REUSSITE ATTENDUE    
+    Put_line("Affectation d'un entier à un entier : REUSSITE ATTENDUE (pommes <- 5)");
     Put("Avant affectation, pommes vaut : ");
     --pommes := test_entiers.all.tab("pommes"); --récupération de la valeur actuelle de "pommes"
     --Put (pommes, 0);
