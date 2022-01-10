@@ -9,13 +9,21 @@ package body interversexec is
 
    procedure blocDeclaration(code_intermediaire : in File_Type) is
 
-<<<<<<< HEAD
-     tab_cell_entier : Tableau_Cellule;
-     tab_entier : T_Variables := ("entier" => tab_cell_entier);
-=======
      --tab_cell_entier : Tableau_Cellule;
      --tab_entier : T_Variables := ("entier",tab_cell_entier);
->>>>>>> 8dbd1f9e2273f1a3886586ca52ce59a17322d06c
+    Open(File,In_File,"truc.txt","");
+               -- on ouvre le fichier de nom truc.txt
+               -- dans le programme on l'appelle File
+     while not End_Of_File(File) loop
+        if End_Of_Line(File) then
+           Get(F,C); -- on lit un caractere dans File
+           New_Line;
+        else
+           Get(F,C); -- on lit un caractere dans File
+           Put(C);   -- on affiche c a l'ecran
+        end if;
+     end loop;
+   Close(F);  -- fermeture de f
 
    begin
 
