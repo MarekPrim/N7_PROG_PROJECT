@@ -51,16 +51,6 @@ New_Line;
     New_Line;
     --***** Fin tests de la procédure affectation ******
 
-    --***** Tests de la procédure TantQue *****
-    New_Line;
-    Put_Line ("Test de la procédure TantQue : ");
-    New_Line;
-
-
-    --TantQue;
-
-
-    --***** Fin tests de la procédure affectation ******
 
     --***** test BlocDeclaration *****
 
