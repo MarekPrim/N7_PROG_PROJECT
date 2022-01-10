@@ -1,0 +1,9 @@
+-- fichier de test pour test 01 : bloc de déclaration
+
+Programme Facto est
+  pommes, patates, carotes : Entier
+  bool1, bool2 : Booléen
+
+Début
+
+Fin

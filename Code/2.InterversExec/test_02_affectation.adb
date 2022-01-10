@@ -5,7 +5,7 @@ with interversexec; --use interversexec;
 --with sourceVersInter; use sourceVersInter;
 -- R0
 
-procedure test_01_affectation is
+procedure test_02_affectation is
     -- Packages de généricité (pour tableaux)
     package entiers is new interversexec(Element=> Integer,image => Integer'Image);
     use entiers;
@@ -14,7 +14,7 @@ procedure test_01_affectation is
     use booleens;
     --Fin packages de généricité (pour tableaux)
 
-    --pommes : integer;
+    pommes : integer := 0; --variable du test pour simplifier la lecture
 
 begin
 
@@ -22,18 +22,8 @@ begin
     Put_Line ("Tests de la procédure affectation : ");
     New_Line;
 
-    -- Ce test ne vérifie pas la création de variables via déclaration, seulement leur affectation.
-    -- On crée donc une variable d'entiers pour ce test :
-    
-    --test_entiers := new P_Cellule;
-    --test_entiers.all.types := "entier";
-    --test_entiers(1) := new Cellule;
-    --test_entiers.all.tab := new Tableau_Cellule;
-    --test_entiers.all.tab := ("pommes" => 0);
-
     -- Affection d'un entier à un entier : REUSSITE ATTENDUE    
-    Put_line("On affecte le nombre 5 à un entier nommé 'pommes' (pommes <- 5).");
-    Put_line("L'affectation doit être réussie :");
+    Put_line("On affecte le nombre 5 à un entier nommé 'pommes' (pommes <- 5). (doit réussir");
     Put("Avant affectation, pommes vaut : ");
     --pommes := test_entiers.all.tab("pommes"); --récupération de la valeur actuelle de "pommes"
     --Put (pommes, 0);
@@ -82,4 +72,4 @@ begin
     New_Line;
     --***** Fin tests de la procédure affectation ******
 
-end test_01_affectation;
+end test_02_affectation;
