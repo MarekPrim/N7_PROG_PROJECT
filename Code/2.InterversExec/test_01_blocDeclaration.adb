@@ -20,16 +20,32 @@ begin
 Put_line("");
 New_Line;
 
-    -- fichier pour test
+    -- Tests affectation d'entiers à des entiers (fichier correct) :
     Open (fichier_test, In_File,"./test_files/test_01_file");
 
-
-    --***** test Tests de la procédure BlocDeclaration *****
-    Put_Line ("Tests de la procédure blocDecaration via fichier test : ");
+    Put_Line ("Tests affectation d'entiers à des entiers (fichier correct) : ");   
     New_Line;
-    blocDeclaration(fichier_test);
+    intermediaire2execution(fichier_test); --procédure principale
 
-    --***** Fin tests de la procédure BlocDeclaration ******
+    Close (fichier_test);
+
+    -- Tests affectation de string à un entier (fichier incorrect) :
+    Open (fichier_test, In_File,"./test_files/test_02_file");
+
+    Put_Line ("Tests affectation de string à un entier (fichier incorrect) : ");   
+    New_Line;
+    intermediaire2execution(fichier_test); --procédure principale
+
+    Close (fichier_test);
+
+    -- Tests affectation de string à un entier (fichier incorrect) :
+    Open (fichier_test, In_File,"./test_files/test_02_file");
+
+    Put_Line ("Tests affectation de string à un entier (fichier incorrect) : ");   
+    New_Line;
+    intermediaire2execution(fichier_test); --procédure principale
+
+    Close (fichier_test);
 
 
 end test_01_blocDeclaration;
