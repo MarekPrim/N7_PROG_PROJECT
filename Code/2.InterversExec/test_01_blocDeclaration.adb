@@ -27,9 +27,7 @@ New_Line;
     --***** test Tests de la procédure BlocDeclaration *****
     Put_Line ("Tests de la procédure blocDecaration via fichier test : ");
     New_Line;
-
-    --
-    --blocDeclaration(fichier_test);
+    blocDeclaration(fichier_test);
 
     --***** Fin tests de la procédure BlocDeclaration ******
 
