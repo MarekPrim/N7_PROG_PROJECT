@@ -9,9 +9,12 @@ package body interversexec is
 
    procedure blocDeclaration(code_intermediaire : in File_Type) is
 
+     
+
+   begin
      --tab_cell_entier : Tableau_Cellule;
      --tab_entier : T_Variables := ("entier",tab_cell_entier);
-    Open(File,In_File,"truc.txt","");
+    Open(File,In_File,"truc.txt");
                -- on ouvre le fichier de nom truc.txt
                -- dans le programme on l'appelle File
      while not End_Of_File(File) loop
@@ -24,10 +27,6 @@ package body interversexec is
         end if;
      end loop;
    Close(F);  -- fermeture de f
-
-   begin
-
-     null;
 
    end blocDeclaration;
 
