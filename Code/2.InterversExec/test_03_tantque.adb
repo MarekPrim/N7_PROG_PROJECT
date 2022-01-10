@@ -5,7 +5,7 @@ with interVersExec ;
 --with sourceVersInter; use sourceVersInter;
 -- R0
 
-procedure test_02_tantque is
+procedure test_03_tantque is
     -- Packages de généricité (pour tableaux)
     package entiers is new interversexec(Element=> Integer,image => Integer'Image);
     use entiers;
@@ -28,4 +28,4 @@ New_Line;
 
     --***** Fin tests de la procédure TantQue ******
 
-end test_02_tantque;
+end test_03_tantque;
