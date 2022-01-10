@@ -1,10 +1,6 @@
 -- XXXX
 package body interversexec is
 
-  --procedure open(File : in out file_type ;
-  --             Mode : in File_Mode := Out_File ;
-  --             Name : in string) ;--*
-
    procedure intermediaire2execution(code_intermediaire : in File_Type) is
    begin
         blocDeclaration(code_intermediaire);
