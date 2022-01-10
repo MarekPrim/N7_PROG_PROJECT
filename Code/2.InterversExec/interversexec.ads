@@ -8,15 +8,11 @@ generic
 
 package interversexec is
 
-   --Type String is private;
-   Type Tableau_Variables is private;
-   Type Cellule is private;
-
-   --Type Tab_Entier is private;
-   --Type Tab_Booleens is private;
+   -- Type P_Cellule is access Cellule
+   Type P_Cellule is private;
 
    -- Exceptions
-   Vide : exception;
+   --Vide : exception;
    -- Fin exceptions
 
    --procedure intermediaire2execution
@@ -70,17 +66,14 @@ package interversexec is
    procedure tantQue;
 
    private
-      -- Le string "types" est le nom du type souhaité ou le nom de la variable, soit une chaine de charactères
-      Type name is array(1..30) of Character;
-
-      -- Un tableau de cellules contient toutes les variables d'un même type
-      Type Tableau_Variables is array(1..100) of Cellule;
-
       Type Cellule;
+      Type P_Cellule is access Cellule;
       type Cellule is record
-         nom : name;
+         nom : string(1..30);
          valeur : Element;
       end record;
+
+      Type Tableau_Variables is array(1..100) of P_Cellule; 
 
 end interversexec;
 
