@@ -71,8 +71,13 @@ package interversexec is
       Type Cellule;
       Type P_Cellule is access Cellule;
       type Cellule is record
+<<<<<<< HEAD
          nom : Unbounded_String;
          --valeur : Element;
+=======
+         nom : string(1..30);
+         valeur : Element;
+>>>>>>> 00642ae77deb3205308d38eb4ce47af6c569bad4
       end record;
 
       Type Tableau_Variables is array(1..100) of P_Cellule;
