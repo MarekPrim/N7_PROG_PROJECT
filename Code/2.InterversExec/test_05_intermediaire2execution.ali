@@ -11,7 +11,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLICIT_LOOPS
 RV SPARK_05
 
-U test_01_affectation%b	test_01_affectation.adb	282e4c98 NE OO SU IL
+U test_05_intermediaire2execution%b  test_05_intermediaire2execution.adb  343eb31b NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -31,7 +31,7 @@ D a-tiinio.ads		20210408115627 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210408115627 5ab55268 interfaces%s
 D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
-D interversexec.ads	20220110161604 15fabbec interversexec%s
+D interversexec.ads	20220110160148 df7733ec interversexec%s
 D interversexec.adb	20220110105741 4296df1a interversexec%b
 D system.ads		20210408115627 4635ec04 system%s
 D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
@@ -48,26 +48,24 @@ D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
 D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
-D test_01_affectation.adb  20220110161636 656babbd test_01_affectation%b
+D test_05_intermediaire2execution.adb  20220110160338 b3f6dc3e test_05_intermediaire2execution%b
 G a e
-G c Z b b [test_01_affectation standard 8 11 none]
-G r i none [test_01_affectation standard 8 11 none] [interversexec standard 9 9 none]
+G c Z b b [test_05_intermediaire2execution standard 8 11 none]
+G r i none [test_05_intermediaire2execution standard 8 11 none] [interversexec standard 9 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 29|2r6 2r32 3r6 3r24
 X 3 a-inteio.ads
 18K13*Integer_Text_IO[8|46] 29|2w10 2r36
 X 7 a-textio.ads
 57K13*Text_IO 727e16 29|3w10 3r28
-264U14*New_Line 29|23s5 40s5 44s5 45s5 52s5 56s5 57s5 65s5 69s5 70s5 77s5
-. 81s5 82s5
-465U14*Put 29|37s5 42s5 50s5 54s5 62s5 67s5 75s5 79s5
-508U14*Put_Line 29|22s5 35s5 36s5 48s5 49s5 60s5 61s5 73s5 74s5
+264U14*New_Line 29|20s1 25s5
+508U14*Put_Line 29|19s1 24s5
 X 12 interversexec.ads
 6+9 Element 29|10r42 13r43
 7V18 image{string} 29|10r60 13r61
 9k9*interversexec 78e18 29|4w6 10r28 13r29
-X 29 test_01_affectation.adb
-8U11*test_01_affectation 8b11 85l5 85t24
+X 29 test_05_intermediaire2execution.adb
+8U11*test_05_intermediaire2execution 8b11 32l5 32t36
 10K13 entiers[12|9] 11r9
 13K13 booleens[12|9] 14r9
 

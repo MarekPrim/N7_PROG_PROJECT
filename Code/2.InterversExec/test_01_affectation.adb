@@ -14,8 +14,6 @@ procedure test_01_affectation is
     use booleens;
     --Fin packages de généricité (pour tableaux)
 
-    test_entiers : P_Cellule;
-    test_bool : P_Cellule;
     --pommes : integer;
 
 begin
@@ -27,7 +25,7 @@ begin
     -- Ce test ne vérifie pas la création de variables via déclaration, seulement leur affectation.
     -- On crée donc une variable d'entiers pour ce test :
     
-    test_entiers := new P_Cellule;
+    --test_entiers := new P_Cellule;
     --test_entiers.all.types := "entier";
     --test_entiers(1) := new Cellule;
     --test_entiers.all.tab := new Tableau_Cellule;

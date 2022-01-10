@@ -8,9 +8,9 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV SPARK_05
 
-U interversexec%b	interversexec.adb	d55bc6b6 NE OO PK GE IL
+U interversexec%b	interversexec.adb	576c64f6 NE OO PK GE IL
 
-U interversexec%s	interversexec.ads	cf724565 BN EE NE OO PK GE IL
+U interversexec%s	interversexec.ads	4d45e725 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -26,7 +26,7 @@ D a-tiinio.ads		20210408115627 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210408115627 5ab55268 interfaces%s
 D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
-D interversexec.ads	20220110154246 97cd19ac interversexec%s
+D interversexec.ads	20220110161604 15fabbec interversexec%s
 D interversexec.adb	20220110105741 4296df1a interversexec%b
 D system.ads		20210408115627 4635ec04 system%s
 D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
@@ -49,28 +49,25 @@ X 3 a-inteio.ads
 18K13*Integer_Text_IO[8|46] 12|3w10 3r36
 X 7 a-textio.ads
 57K13*Text_IO 727e16 12|2w10 2r28
-64P9*File_Type 12|32r62 42r54 52r52 13|4r62 10r54 21r53
+64P9*File_Type 12|26r62 36r54 46r52 13|4r62 10r54 21r53
 X 12 interversexec.ads
-6+9 Element 7r34 83r19
+6+9 Element 7r34
 7V18 image{string} 7>24
 7*24 Item{6+9}
-9k9*interversexec 6z9 7z18 79E12 88l5 88e18 13|2b14 44l5 44t18
-14P9*P_Cellule 80c12
-21X4*Vide
-32U14*intermediaire2execution 32>38 13|4b14 8l8 8t31
-32p38 code_intermediaire{7|64P9} 13|4b38 6r25 7r23
-42U14*blocDeclaration 42>30 13|6s9 10b14 19l8 19t23
-42p30 code_intermediaire{7|64P9} 13|10b30
-52U14*blocPrincipal 52>28 13|7s9 21b15 24l9 24t22
-52p28 code_intermediaire{7|64P9} 13|21b29
-62U14*affectation 62>26 13|26b15 34l9 34t20
-62a26 ligne{string} 13|26b27 28r21
-72U14*tantQue 13|36b15 42l9 42t16
-79R12 Cellule 80r32 81c12 84e17 86r50
-81R12 Cellule
-82a10 nom{string}
-83*10 valeur{6+9}
-86A12 Tableau_Variables(81R12)<integer>
+9k9*interversexec 6z9 7z18 69E12 78l5 78e18 13|2b14 44l5 44t18
+12P9*P_Cellule 70c12 76r50
+26U14*intermediaire2execution 26>38 13|4b14 8l8 8t31
+26p38 code_intermediaire{7|64P9} 13|4b38 6r25 7r23
+36U14*blocDeclaration 36>30 13|6s9 10b14 19l8 19t23
+36p30 code_intermediaire{7|64P9} 13|10b30
+46U14*blocPrincipal 46>28 13|7s9 21b15 24l9 24t22
+46p28 code_intermediaire{7|64P9} 13|21b29
+56U14*affectation 56>26 13|26b15 34l9 34t20
+56a26 ligne{string} 13|26b27 28r21
+66U14*tantQue 13|36b15 42l9 42t16
+69R12 Cellule 70r32 71c12 74e17
+72a10 nom{string}
+76A12 Tableau_Variables(12P9)<integer>
 X 13 interversexec.adb
 28a7 a{string}
 

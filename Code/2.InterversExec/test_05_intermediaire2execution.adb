@@ -14,6 +14,7 @@ procedure test_05_intermediaire2execution is
     use booleens;
     --Fin packages de généricité (pour tableaux)
     
+    test_entiers : P_Cellule;
 begin
 Put_line("");
 New_Line;
