@@ -28,8 +28,8 @@ begin
     -- On crée donc une variable d'entiers pour ce test :
     
     test_entiers := new T_Variables;
+    test_entiers.all.types := "entier";
     test_entiers.all.tab := new Tableau_Cellule;
-    test_entiers.all.nom := "entier";
     test_entiers.all.tab := ("pommes" => 0);
 
     -- Affection d'un entier à un entier : REUSSITE ATTENDUE    
