@@ -6,13 +6,41 @@ RN
 RV NO_IO
 RV SPARK_05
 
-U interversexec%b	interversexec.adb	3803050a NE OO PK GE IL
+U interversexec%b	interversexec.adb	6e0f7ebe NE OO PK GE IL
 
 U interversexec%s	interversexec.ads	222a86d9 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
+<<<<<<< HEAD
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D interversexec.ads	20220106075426 7a95da10 interversexec%s
+D interversexec.adb	20220106081354 149aa4ae interversexec%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+=======
 D ada.ads		20210408115627 76789da1 ada%s
 D a-except.ads		20210408115627 a7106115 ada.exceptions%s
 D a-inteio.ads		20210408115627 f64b89a4 ada.integer_text_io%s
@@ -41,6 +69,7 @@ D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
 G a e
 G c Z s b [interversexec standard 9 9 none]
+>>>>>>> c6e5456ef50bb0048cf51e7a68852dd483ec9bbc
 X 1 ada.ads
 16K9*Ada 20e8 12|2r6 2r24 3r6 3r32
 X 3 a-inteio.ads
@@ -54,7 +83,7 @@ X 12 interversexec.ads
 7*24 Item{6+9}
 9k9*interversexec 6z9 7z18 73E12 95l5 95e18 13|2b14 44l5 44t18
 12A9*String(character) 59r37 73c12 78r16 89r18 13|26r38 28r11
-13A9*Tableau_Cellule(77R12) 83c12 90r16
+13A9*Tableau_Cellule(77R12) 83c12 90r16 13|12r24
 18X4*Vide
 29U14*intermediaire2execution 29>38 13|4b14 8l8 8t31
 29p38 code_intermediaire{7|64P9} 13|4b38 6r25 7r23
@@ -69,9 +98,12 @@ X 12 interversexec.ads
 77R12 Cellule
 78a10 nom{12A9}
 79*10 valeur{6+9}
-86R12 T_Variables 88c12 91e17
+86R12 T_Variables 88c12 91e17 13|13r19
+88R12 T_Variables
 89a10 types{12A9}
 90a10 tab{13A9}
 X 13 interversexec.adb
+12a6 tab_cell_entier{12|13A9} 13r44
+13r6 tab_entier{12|88R12}
 28a7 a{12|12A9}
 

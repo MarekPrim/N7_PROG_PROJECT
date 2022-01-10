@@ -1,6 +1,10 @@
 -- XXXX
 package body interversexec is
 
+  procedure open(File : in out file_type ;
+               Mode : in File_Mode := Out_File ;
+               Name : in string) ;
+
    procedure intermediaire2execution(code_intermediaire : in File_Type) is
    begin
         blocDeclaration(code_intermediaire);
@@ -9,8 +13,8 @@ package body interversexec is
 
    procedure blocDeclaration(code_intermediaire : in File_Type) is
 
-     --tab_cell_entier : Tableau_Cellule;
-     --tab_entier : T_Variables := ("entier",tab_cell_entier);
+     tab_cell_entier : Tableau_Cellule;
+     tab_entier : T_Variables := ("entier",tab_cell_entier);
 
    begin
 
