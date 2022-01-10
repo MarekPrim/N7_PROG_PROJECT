@@ -14,14 +14,22 @@ procedure test_01_affectation is
     use booleens;
     --Fin packages de généricité (pour tableaux)
 
+    Test : Cellule;
+
 begin
 
     --***** Tests de la procédure affectation ******
     Put_Line ("Tests de la procédure affectation : ");
     New_Line;
 
-    -- Affection d'un entier à un entier : REUSSITE ATTENDUE
-    -- ## ATTENTION, ce test doit prendre en compte qu'affectation vérifie l'existence de la variable (créer 'pommes' ?)
+    -- Ce test ne vérifie pas la création de variables via déclaration, seulement leur affectation.
+    -- On crée donc une variable pour ce test :
+    Test := new Cellule;
+    --Test.all.nom := "pommes";
+    --Test.all.valeur := 0;
+    --
+
+    -- Affection d'un entier à un entier : REUSSITE ATTENDUE    
     Put_line("On affecte le nombre 5 à un entier nommé 'pommes' (pommes <- 5).");
     Put_line("L'affectation doit être réussie :");
     Put("Avant affectation, pommes vaut : ");
