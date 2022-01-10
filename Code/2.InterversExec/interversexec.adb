@@ -9,7 +9,7 @@ package body interversexec is
 
    procedure blocDeclaration(code_intermediaire : in File_Type) is
 
-     
+     My_file : File ;
 
    begin
      --tab_cell_entier : Tableau_Cellule;
