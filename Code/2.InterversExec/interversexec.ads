@@ -70,7 +70,7 @@ package interversexec is
       Type P_Cellule is access Cellule;
       type Cellule is record
          nom : string(1..30);
-         --valeur : Element;
+         valeur : Element;
       end record;
 
       Type Tableau_Variables is array(1..100) of P_Cellule; 
