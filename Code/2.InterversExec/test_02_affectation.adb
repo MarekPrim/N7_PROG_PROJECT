@@ -17,6 +17,8 @@ procedure test_02_affectation is
     fichier_test : File_Type;
 
 begin
+    -- fichier pour test
+    Open (fichier_test, In_File,"./test_files/test_02.1");
 
     --***** Tests de la procédure affectation ******
     Put_Line ("Tests de la procédure affectation : ");
@@ -24,9 +26,7 @@ begin
 
     -- Affectation d'un entier à un entier : REUSSITE ATTENDUE    
     Put_line("Affectation d'un entier à un entier : REUSSITE ATTENDUE (pommes <- 5)");
-    Put("Avant affectation, pommes vaut : ");
-    --pommes := test_entiers.all.tab("pommes"); --récupération de la valeur actuelle de "pommes"
-    --Put (pommes, 0);
+    
     New_Line;
     --interversexec.affectation("1 pommes <- 5");
     Put("Après affectation, pommes vaut : ");
