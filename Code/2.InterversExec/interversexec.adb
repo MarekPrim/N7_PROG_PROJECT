@@ -9,8 +9,8 @@ package body interversexec is
 
    procedure blocDeclaration(code_intermediaire : in File_Type) is
 
-     tab_cell_entier : Tableau_Cellule;
-     tab_entier : T_Variables := ("entier",tab_cell_entier);
+     --tab_cell_entier : Tableau_Cellule;
+     --tab_entier : T_Variables := ("entier",tab_cell_entier);
 
    begin
 
