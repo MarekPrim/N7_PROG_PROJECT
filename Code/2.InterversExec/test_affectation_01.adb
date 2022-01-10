@@ -51,15 +51,4 @@ New_Line;
     New_Line;
     --***** Fin tests de la procédure affectation ******
 
-
-    --***** test BlocDeclaration *****
-
-    --BlocDeclaration();
-
-    --***** test BlocPrincipal *****
-
-    --BlocPrincipal();
-
-    --***** test intermediaire2execution *****
-
 end test_affectation_01;
