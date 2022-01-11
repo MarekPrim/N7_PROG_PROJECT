@@ -3,6 +3,7 @@ package body interversexec is
 
    procedure intermediaire2execution(code_intermediaire : in File_Type) is
    begin
+        creer_tableaux_vides;
         blocDeclaration(code_intermediaire);
         blocPrincipal(code_intermediaire);
    end intermediaire2execution;

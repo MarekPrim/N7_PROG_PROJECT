@@ -61,18 +61,37 @@ package interversexec is
    --procedure TantQue
    --Comment R1.2 : R2.2: Traiter une boucle Tant Que comprise dans le bloc principal
    --semantique: XXXXXXX
-   --parametres: nom : XXXXXXX
+   --parametres: code_intermediaire    type :  Fichier     flux : entree
+   --            ligne_debut
    --pre-condition: XXXXXXX
    --post-condition: XXXXXXX
    --exception: XXXXXXX
-   procedure tantQue;
+   procedure tantQue(code_intermediaire : in File_Type; ligne_debut : in integer);
+
+   --procedure affichage
+   --semantique: Affiche toutes les valeurs des variables actuellement enregistrées
+   --parametres: nom : XXXXXXX
+   --pre-condition: XXXXXXX
+   --post-condition: XXXXXXX
+   --exception: aucun variable n'existe
+   procedure affichage;
+
+   --procedure creer_tableaux_vides
+   --semantique: - Crée des Tableaux_Variables vides de tous les types prédéfinis (entiers, booléens)
+   --            - Vide les tableaux préexistants de toutes variables
+   --            Permet d'enchainer le traitement de plusieurs fichiers / programmes
+   --parametres: aucun
+   --pre-condition: aucune
+   --post-condition: les tableaux existent, et sont vides
+   --exception: aucune
+   procedure creer_tableaux_vides;
 
    private
       Type Cellule;
       Type P_Cellule is access Cellule;
       type Cellule is record
          nom : Unbounded_String;
-         --valeur : Element;
+         valeur : Element;
       end record;
 
       Type Tableau_Variables is array(1..100) of P_Cellule;

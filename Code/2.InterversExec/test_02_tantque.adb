@@ -19,12 +19,14 @@ procedure test_02_tantque is
 begin
 
     --Tests de programmes contenant des boucles TantQue (utilisation test_files 10 à 11)
-    -- Ces tests valident le fonctionnement des procédures suivantes :
+    -- Ces tests valident le fonctionnement de toutes les procédures :
     --  intermediaire2execution
+    --  creer_tableaux_vides
     --  blocDeclaration
     --  blocPrincipal
     --  affectation
     --  tantque
+    --  affichage
 
     -- Tests d'un programme, boucle tant que (programme correct) :
     Open (fichier_test, In_File,"./test_files/test_10_file");
