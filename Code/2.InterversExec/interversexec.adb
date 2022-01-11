@@ -8,6 +8,12 @@ package body interversexec is
         blocPrincipal(code_intermediaire);
    end intermediaire2execution;
 
+   procedure creer_tableaux_vides is
+
+   begin
+    null;
+   end creer_tableaux_vides;
+
    procedure blocDeclaration(code_intermediaire : in File_Type) is
 
      My_file : File ;
@@ -53,5 +59,12 @@ package body interversexec is
       null;
 
     end tantQue;
+
+    procedure affichage is
+
+    begin
+      null;
+    end affichage;
+
 
 end interversexec;

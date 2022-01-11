@@ -27,6 +27,16 @@ package interversexec is
    --           Fichier en entree vide
    procedure intermediaire2execution(code_intermediaire : in File_Type);
 
+   --procedure creer_tableaux_vides
+   --semantique: - Crée des Tableaux_Variables vides de tous les types prédéfinis (entiers, booléens)
+   --            - Vide les tableaux préexistants de toutes variables
+   --            Permet d'enchainer le traitement de plusieurs fichiers / programmes
+   --parametres: aucun
+   --pre-condition: aucune
+   --post-condition: les tableaux existent, et sont vides
+   --exception: aucune
+   procedure creer_tableaux_vides;
+
    --procedure blocDeclaration
    --Comment R1 : R1.1: Traiter le bloc de déclaration des variables.
    --semantique: A partir d'un fichier en entree ecrit en code source, traite le bloc de déclaration des variables.
@@ -75,16 +85,6 @@ package interversexec is
    --post-condition: XXXXXXX
    --exception: aucun variable n'existe
    procedure affichage;
-
-   --procedure creer_tableaux_vides
-   --semantique: - Crée des Tableaux_Variables vides de tous les types prédéfinis (entiers, booléens)
-   --            - Vide les tableaux préexistants de toutes variables
-   --            Permet d'enchainer le traitement de plusieurs fichiers / programmes
-   --parametres: aucun
-   --pre-condition: aucune
-   --post-condition: les tableaux existent, et sont vides
-   --exception: aucune
-   procedure creer_tableaux_vides;
 
    private
       Type Cellule;
