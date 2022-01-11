@@ -21,9 +21,11 @@ begin
     --Tests de programmes contenant des affectations (utilisation test_files 01 à 06)
     -- Ces tests valident le fonctionnement des procédures suivantes :
     --  intermediaire2execution
+    --  creer_tableaux_vides
     --  blocDeclaration
     --  blocPrincipal
     --  affectation
+    --  affichage
 
     -- Tests affectation d'entiers à des entiers (programme correct) :
     Open (fichier_test, In_File,"./test_files/test_01_file");
