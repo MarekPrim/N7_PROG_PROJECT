@@ -1,0 +1,13 @@
+-- Tests affectation d'un entier à un entier, et booléén à un booléen (programme correct) :
+
+Programme Facto est
+  pommes, patates : Entier
+  vrai, faux : Booléen
+
+Début
+  1 pommes <- 2
+  2 patates <- 4 * 2
+  3 vrai <- true
+  4 faux <- false
+Fin
+

@@ -1,0 +1,9 @@
+-- Tests affectation d'un entier à un booléen (programme incorrect) :
+
+Programme Facto est
+  bool1, bool2 : Booléen
+
+Début
+  1 bool1 <- true
+  2 bool2 <- 5
+Fin

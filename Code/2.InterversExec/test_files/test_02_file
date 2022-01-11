@@ -1,9 +1,9 @@
--- Tests affectation d'entiers à des entiers (fichier correct) :
+-- Tests affectation de string à un entier (programme incorrect) :
 
 Programme Facto est
   pommes, patates : Entier
 
 Début
   1 pommes <- 5
-  2 patates <- 12
+  2 patates <- "texte"
 Fin
