@@ -1,6 +1,14 @@
 -- XXXX
 package body interversexec is
 
+  -- Packages de généricité (pour tableaux)
+  --  package entiers is new interversexec(Element=> Integer,image => Integer'Image);
+  --  use entiers;
+
+  --  package booleens is new interversexec(Element=> Boolean,image => Boolean'Image);
+  --  use booleens;
+  --Fin packages de généricité (pour tableaux)
+
    procedure intermediaire2execution(code_intermediaire : in File_Type; un : in Element; deux : in Element) is
    begin
         creer_tableaux_vides;

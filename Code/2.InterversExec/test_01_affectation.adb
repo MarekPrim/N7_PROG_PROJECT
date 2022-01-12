@@ -19,7 +19,7 @@ procedure test_01_affectation is
 
 begin
 
-    --Tests de programmes contenant des affectations (utilisation test_files 01 à 06)
+    -- Tests de programmes contenant des affectations (utilisation test_files 01 à 06)
     -- Ces tests valident le fonctionnement des procédures suivantes :
     --  intermediaire2execution
     --  creer_tableaux_vides

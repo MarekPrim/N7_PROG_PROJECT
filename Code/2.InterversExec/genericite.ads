@@ -1,13 +1,19 @@
-with interVersExec;
+--with interVersExec;
 
+generic
+   type Element is private; --Sera des entiers ou des booleens
+   with function image(Item : in Element) return String;
 package genericite is
 
-    -- Packages de généricité (pour tableaux)
-    package entiers is new interversexec(Element=> Integer,image => Integer'Image);
-    use entiers;
+    Type P_Cellule is private;
 
-    package booleens is new interversexec(Element=> Boolean,image => Boolean'Image);
-    use booleens;
-    --Fin packages de généricité (pour tableaux)
+    private
+        Type Cellule;
+        Type P_Cellule is access Cellule;
+        type Cellule is record
+           nom : Unbounded_String;
+           valeur : Element;
+        end record;
+        Type Tableau_Variables is array(1..100) of P_Cellule;
 
 end genericite;
