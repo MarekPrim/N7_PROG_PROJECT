@@ -1,7 +1,7 @@
 -- XXXX
 package body interversexec is
 
-   procedure intermediaire2execution(code_intermediaire : in File_Type) is
+   procedure intermediaire2execution(code_intermediaire : in File_Type; un : in Element; deux : in Element) is
    begin
         creer_tableaux_vides;
         blocDeclaration(code_intermediaire);
@@ -16,25 +16,25 @@ package body interversexec is
 
    procedure blocDeclaration(code_intermediaire : in File_Type) is
 
-     My_file : File ;
+     --My_file : File ;
 
    begin
      --tab_cell_entier : Tableau_Cellule;
      --tab_entier : T_Variables := ("entier",tab_cell_entier);
-    Open(File,In_File,"./test_files/test_01_file");
-               -- on ouvre le fichier de nom truc.txt
-               -- dans le programme on l'appelle File
-     while not End_Of_File(File) loop
-        if End_Of_Line(File) then
-           Get(F,C); -- on lit un caractere dans File
-           New_Line;
-        else
-           Get(F,C); -- on lit un caractere dans File
-           Put(C);   -- on affiche c a l'ecran
-        end if;
-     end loop;
-   Close(F);  -- fermeture de f
-
+   -- Open(File,In_File,"./test_files/test_01_file");
+   --            -- on ouvre le fichier de nom truc.txt
+   --            -- dans le programme on l'appelle File
+   --  while not End_Of_File(File) loop
+   --     if End_Of_Line(File) then
+   --        Get(F,C); -- on lit un caractere dans File
+   --        New_Line;
+   --     else
+   --        Get(F,C); -- on lit un caractere dans File
+   --        Put(C);   -- on affiche c a l'ecran
+   --     end if;
+   --  end loop;
+   --Close(F);  -- fermeture de f
+    null;
    end blocDeclaration;
 
     procedure blocPrincipal(code_intermediaire : in File_Type) is
@@ -52,7 +52,7 @@ package body interversexec is
 
     end affectation;
 
-    procedure tantQue is
+    procedure tantQue(code_intermediaire : in File_Type; ligne_debut : in integer) is
 
     begin -- tantQue
 

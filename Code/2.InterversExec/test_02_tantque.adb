@@ -8,16 +8,18 @@ with interVersExec;
 
 procedure test_02_tantque is
     -- Packages de généricité (pour tableaux)
-    --package entiers is new interversexec(Element=> Integer,image => Integer'Image);
-    --use entiers;
+    package entiers is new interversexec(Element=> Integer,image => Integer'Image);
+    use entiers;
 
-    --package booleens is new interversexec(Element=> Boolean,image => Boolean'Image);
-    --use booleens;
+    package booleens is new interversexec(Element=> Boolean,image => Boolean'Image);
+    use booleens;
 
     --Fin packages de généricité (pour tableaux)
 
     fichier_test : File_Type;
 
+    Cel_entiers : entiers.P_Cellule;
+    Cel_bool : booleens.P_Cellule;
     --ent : entiers.Tableau_Variables;
 
 begin
@@ -38,7 +40,7 @@ begin
     Put_Line ("Tests d'un programme, boucle tant que (programme correct) : ");   
     New_Line;
     -- Affichage des valeurs ici ?
-    intermediaire2execution(fichier_test); --procédure principale
+    intermediaire2execution(fichier_test, Cel_entiers, Cel_bool); --procédure principale
     -- Ce programme calcule la factorielle de 5!
     -- Résultat attendu : Fact := 120
 
