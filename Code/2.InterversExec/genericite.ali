@@ -6,7 +6,7 @@ RN
 RV NO_STANDARD_STORAGE_POOLS
 RV SPARK_05
 
-U genericite%s		genericite.ads		8a28e1ac NE OO PK GE IL
+U genericite%s		genericite.ads		e576c444 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -23,7 +23,7 @@ D a-strmap.ads		20200312110721 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20200312110721 8098c91f ada.strings.unbounded%s
 D a-suteio.ads		20200312110721 26d8e9aa ada.strings.unbounded.text_io%s
 D a-textio.ads		20200312110721 881db35a ada.text_io%s
-D genericite.ads	20220113081638 2c68c119 genericite%s
+D genericite.ads	20220113081954 4336e4f1 genericite%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
 D system.ads		20200312110721 4635ec04 system%s
@@ -49,7 +49,7 @@ X 12 genericite.ads
 7*24 Item{6+9}
 8k9*genericite 6z9 7z18 18l5 18e15
 10R9*Cellule 11r29 12c9 15e14
-11P9*P_Cellule(10R9) 16r47
+11P9*P_Cellule(10R9) 16r46
 13r7 nom{9|79R9}
 14*7 valeur{6+9}
 16A9*Tableau_Variables(11P9)<integer>
