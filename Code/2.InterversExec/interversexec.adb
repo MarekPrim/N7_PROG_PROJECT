@@ -45,15 +45,17 @@ package body interversexec is
 
      Virgule : constant Character_Set := To_Set (',');
      DeuxPoints : constant Character_Set := To_Set (':');
+     debut : string(1..5);
 
    begin
      Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
-     
-     while not End_Of_File(File) loop --Parcours le fichier tant que l'on ne voit pas la fin
+
+     while not get_line(File) = "Début" loop --Parcours le fichier tant que l'on ne voit pas la fin
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
          get_line(File,S,LENGTH);
+         put(S);
          SuprEspace(S,LENGTH);
          while I in 1..LENGTH loop
            Find_Token
