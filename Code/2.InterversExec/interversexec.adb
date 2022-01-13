@@ -23,7 +23,7 @@ package body interversexec is
 
    procedure creer_tableaux_vides is
    begin
-    
+
    end creer_tableaux_vides;
 
    procedure blocDeclaration(code_intermediaire : in String) is
@@ -94,6 +94,7 @@ package body interversexec is
              Var_Booleen(casetab) := To_Unbounded_String(S (B .. C));
              casetab := casetab + 1;
            else
+             put("test");
              put("Erreur : Type Incorrect");
              put("test----");
              New_Line;
