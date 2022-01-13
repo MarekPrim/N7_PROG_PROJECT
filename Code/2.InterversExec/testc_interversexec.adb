@@ -14,8 +14,7 @@ package body testc_interversexec is
    procedure intermediaire2execution(code_intermediaire : in File_Type) is
       T : P_Cellule; 
    begin
-      null;
-        --creer_tableaux_vides;
+        creer_tableaux_vides;
         --blocDeclaration(code_intermediaire);
         --blocPrincipal(code_intermediaire);
    end intermediaire2execution;
