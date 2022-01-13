@@ -11,8 +11,10 @@ package body testc_interversexec is
   use booleens;
   --Fin packages de généricité (pour tableaux)
 
+  tableau_entiers : entiers.Tableau_Variables;
+  tableau_bool : booleens.Tableau_Variables;
+
    procedure intermediaire2execution(code_intermediaire : in File_Type) is
-      T : P_Cellule; 
    begin
         creer_tableaux_vides;
         --blocDeclaration(code_intermediaire);

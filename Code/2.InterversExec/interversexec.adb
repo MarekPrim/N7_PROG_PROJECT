@@ -1,5 +1,5 @@
 -- XXXX
-with genericite;
+--with genericite;
 
 package body interversexec is
 
@@ -23,7 +23,7 @@ package body interversexec is
 
    procedure creer_tableaux_vides is
    begin
-
+    null;
    end creer_tableaux_vides;
 
    procedure blocDeclaration(code_intermediaire : in String) is
