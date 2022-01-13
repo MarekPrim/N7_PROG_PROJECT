@@ -1,4 +1,6 @@
 --with interVersExec;
+WITH Ada.Strings.Unbounded ; USE Ada.Strings.Unbounded;
+WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO;
 
 generic
    type Element is private; --Sera des entiers ou des booleens

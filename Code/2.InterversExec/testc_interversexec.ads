@@ -3,15 +3,11 @@ WITH ada.Text_IO ; USE ada.Text_IO;
 WITH ada.Integer_Text_IO ; USE ada.Integer_Text_IO;
 WITH Ada.Strings.Unbounded ; USE Ada.Strings.Unbounded;
 WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO;
+--with genericite;
 
-generic
-   type Element is private; --Sera des entiers ou des booleens
-   with function image(Item : in Element) return String;
-
-package TestC_interversexec is
+package testc_interversexec is
 
    -- Type P_Cellule is access Cellule
-   Type P_Cellule is private;
 
    -- Exceptions
    --Vide : exception;
@@ -25,7 +21,7 @@ package TestC_interversexec is
    --post-condition: Le programme est execute sans erreur
    --exception: Fichier incoherent / Ne correspond pas a un fichier de type code intermediaire
    --           Fichier en entree vide
-   procedure intermediaire2execution(code_intermediaire : in File_Type; un : in Element; deux : in Element);
+   procedure intermediaire2execution(code_intermediaire : in File_Type);
 
    --procedure creer_tableaux_vides
    --semantique: - Crée des Tableaux_Variables vides de tous les types prédéfinis (entiers, booléens)
@@ -86,14 +82,4 @@ package TestC_interversexec is
    --exception: aucun variable n'existe
    procedure affichage;
 
-   private
-      Type Cellule;
-      Type P_Cellule is access Cellule;
-      type Cellule is record
-         nom : Unbounded_String;
-         valeur : Element;
-      end record;
-
-      Type Tableau_Variables is array(1..100) of P_Cellule;
-
-end TestC_interversexec;
+end testc_interversexec;
