@@ -1,20 +1,16 @@
 -- XXXX
 WITH ada.Text_IO ; USE ada.Text_IO;
 WITH ada.Integer_Text_IO ; USE ada.Integer_Text_IO;
+
+WITH Ada.Strings ; USE Ada.Strings ;
 WITH Ada.Strings.Unbounded ; USE Ada.Strings.Unbounded;
 WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO;
-WITH ada.Text_IO ; USE ada.Text_IO ;
-WITH ada.Integer_Text_IO ; USE ada.Integer_Text_IO ;
-WITH Ada.Strings.Unbounded ; USE Ada.Strings.Unbounded ;
-WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO ;
 WITH Ada.Strings.Maps ; USE Ada.Strings.Maps ;
-WITH Ada.Strings ; USE Ada.Strings ;
 with Ada.Strings.Fixed; use Ada.Strings.Fixed;
+
 with genericite;
 
 package interversexec is
-
-   -- Type P_Cellule is access Cellule
 
    -- Exceptions
    --Vide : exception;

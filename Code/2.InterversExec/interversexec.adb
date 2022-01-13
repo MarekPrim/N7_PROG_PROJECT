@@ -14,6 +14,7 @@ package body interversexec is
   tableau_entiers : entiers.Tableau_Variables;
   tableau_bool : booleens.Tableau_Variables;
 
+<<<<<<< HEAD
   procedure intermediaire2execution(code_intermediaire : in String) is
   begin
       creer_tableaux_vides;
@@ -52,6 +53,57 @@ package body interversexec is
     DeuxPoints : constant Character_Set := To_Set (':');
 
   begin
+=======
+  nombre_entiers : integer;
+  nombre_booleens : integer;
+
+   procedure intermediaire2execution(code_intermediaire : in String) is
+   begin
+        creer_tableaux_vides;
+        blocDeclaration(code_intermediaire);
+        blocPrincipal(code_intermediaire);
+   end intermediaire2execution;
+
+   procedure creer_tableaux_vides is
+   begin
+   
+    -- On instancie tous les tableaux de variables génériques avec des valeurs nulles
+    for i in 1..20 loop
+      tableau_entiers(i) := null;
+      tableau_bool(i) := null;
+    end loop;
+
+    -- On remet le compteur de variables à 0, pour chaque type
+    nombre_entiers := 0;
+    nombre_booleens := 0;
+
+   end creer_tableaux_vides;
+
+   procedure blocDeclaration(code_intermediaire : in String) is
+
+     File : File_type;
+
+     -----FILE------
+     F,B : positive ;
+     L,C : natural ;
+     I,A : natural := 1;
+     S : String(1..100);
+     R : String(1..100);
+     TYP : Unbounded_String;
+     LENGTH : natural;
+     --Type Tableau_Chaine is array(1..2) of String(100);
+     --n : integer := 1 ;
+     var : integer;
+     casetab : integer := 1;
+     Var_Entier : array(1..100) of Unbounded_String;
+     Var_Booleen : array(1..100) of Unbounded_String;
+
+     Virgule : constant Character_Set := To_Set (',');
+     DeuxPoints : constant Character_Set := To_Set (':');
+     debut : string(1..5);
+
+   begin
+>>>>>>> e27fa521b6f61abadb450d58198f0d4afbcef7a7
      Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
 
 
