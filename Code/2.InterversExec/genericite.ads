@@ -13,6 +13,6 @@ package genericite is
       nom : Unbounded_String;
       valeur : Element;
    end record;
-   Type Tableau_Variables is array(1..100) of P_Cellule;
+   Type Tableau_Variables is array(1..20) of P_Cellule;
 
 end genericite;
