@@ -49,7 +49,7 @@ package body interversexec is
          Skip_Line(File);
        else
          get_line(File,S,LENGTH);
-         put(S);
+         put_line(S);
          SuprEspace(S,LENGTH);
          while I in 1..LENGTH loop
            Find_Token
@@ -87,6 +87,7 @@ package body interversexec is
              casetab := casetab + 1;
            else
              put("Erreur : Type Incorrect");
+             put("test----");
              New_Line;
            end if;
 
