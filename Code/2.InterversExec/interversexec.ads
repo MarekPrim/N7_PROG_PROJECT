@@ -12,9 +12,6 @@ with genericite;
 
 package interversexec is
 
-   nombre_entiers is private;
-
-
    -- Exceptions
    --Vide : exception;
    -- Fin exceptions
@@ -89,8 +86,5 @@ package interversexec is
    procedure affichage;
 
    procedure SuprEspace(Chaine : in out string ; Long : in out natural);
-
-   private
-      nombre_entiers : integer;
 
 end interversexec;

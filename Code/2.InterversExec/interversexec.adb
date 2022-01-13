@@ -14,6 +14,9 @@ package body interversexec is
   tableau_entiers : entiers.Tableau_Variables;
   tableau_bool : booleens.Tableau_Variables;
 
+  nombre_entiers : integer;
+  nombre_booleens : integer;
+
    procedure intermediaire2execution(code_intermediaire : in String) is
    begin
         creer_tableaux_vides;
@@ -23,11 +26,16 @@ package body interversexec is
 
    procedure creer_tableaux_vides is
    begin
+   
     -- On instancie tous les tableaux de variables génériques avec des valeurs nulles
     for i in 1..20 loop
       tableau_entiers(i) := null;
       tableau_bool(i) := null;
     end loop;
+
+    -- On remet le compteur de variables à 0, pour chaque type
+    nombre_entiers := 0;
+    nombre_booleens := 0;
 
    end creer_tableaux_vides;
 
