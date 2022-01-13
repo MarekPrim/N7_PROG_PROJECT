@@ -1,22 +1,28 @@
 -- XXXX
+with genericite;
+
 package body interversexec is
 
-   procedure intermediaire2execution(code_intermediaire : in String) is
-
   -- Packages de généricité (pour tableaux)
-  --  package entiers is new interversexec(Element=> Integer,image => Integer'Image);
-  --  use entiers;
+  package entiers is new interversexec(Element=> Integer,image => Integer'Image);
+  use entiers;
 
-  --  package booleens is new interversexec(Element=> Boolean,image => Boolean'Image);
-  --  use booleens;
+  package booleens is new interversexec(Element=> Boolean,image => Boolean'Image);
+  use booleens;
   --Fin packages de généricité (pour tableaux)
 
+   procedure intermediaire2execution(code_intermediaire : in String) is
    begin
         creer_tableaux_vides;
         blocDeclaration(code_intermediaire);
         blocPrincipal(code_intermediaire);
    end intermediaire2execution;
 
+   procedure creer_tableaux_vides is
+
+   begin
+    null;
+   end creer_tableaux_vides;
 
    procedure blocDeclaration(code_intermediaire : in String) is
 
@@ -96,13 +102,6 @@ package body interversexec is
      Close(File);  -- fermeture du fichier
 
    end blocDeclaration;
-
-
-   procedure creer_tableaux_vides is
-
-   begin
-    null;
-   end creer_tableaux_vides;
 
     procedure blocPrincipal(code_intermediaire : in String) is
     begin
