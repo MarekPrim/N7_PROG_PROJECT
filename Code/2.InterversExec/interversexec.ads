@@ -14,8 +14,6 @@ with genericite;
 
 package interversexec is
 
-   -- Type P_Cellule is access Cellule
-
    -- Exceptions
    --Vide : exception;
    -- Fin exceptions
