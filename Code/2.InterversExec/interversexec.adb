@@ -1,5 +1,5 @@
 -- XXXX
-with genericite;
+--with genericite;
 
 package body interversexec is
 
