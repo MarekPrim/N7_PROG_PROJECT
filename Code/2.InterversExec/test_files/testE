@@ -1,0 +1,7 @@
+Programme Facto est
+  pommes, patates : Entier
+
+Début
+  1 pommes <- 5
+  2 patates <- 12
+Fin
