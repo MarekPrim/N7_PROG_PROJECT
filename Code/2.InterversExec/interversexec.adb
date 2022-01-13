@@ -14,68 +14,70 @@ package body interversexec is
   tableau_entiers : entiers.Tableau_Variables;
   tableau_bool : booleens.Tableau_Variables;
 
-   procedure intermediaire2execution(code_intermediaire : in String) is
-   begin
-        creer_tableaux_vides;
-        blocDeclaration(code_intermediaire);
-        blocPrincipal(code_intermediaire);
-   end intermediaire2execution;
+  procedure intermediaire2execution(code_intermediaire : in String) is
+  begin
+      creer_tableaux_vides;
+      blocDeclaration(code_intermediaire);
+      blocPrincipal(code_intermediaire);
+  end intermediaire2execution;
 
-   procedure creer_tableaux_vides is
-   begin
-    for i in 1..20 loop
-      tableau_entiers(i) := null;
-      tableau_bool(i) := null;
-    end loop;
-   end creer_tableaux_vides;
+  procedure creer_tableaux_vides is
+  begin
+  for i in 1..20 loop
+    tableau_entiers(i) := null;
+    tableau_bool(i) := null;
+  end loop;
+  end creer_tableaux_vides;
 
-   procedure blocDeclaration(code_intermediaire : in String) is
+  procedure blocDeclaration(code_intermediaire : in String) is
 
-     File : File_type;
+    File : File_type;
 
-     -----FILE------
-     F,B : positive ;
-     L,C : natural ;
-     I,A : natural := 1;
-     S : String(1..100);
-     R : String(1..100);
-     TYP : Unbounded_String;
-     LENGTH : natural;
-     --Type Tableau_Chaine is array(1..2) of String(100);
-     --n : integer := 1 ;
-     var : integer;
-     casetab : integer := 1;
-     Var_Entier : array(1..100) of Unbounded_String;
-     Var_Booleen : array(1..100) of Unbounded_String;
+    -----FILE------
+    F,B : positive ;
+    L,C : natural ;
+    I,A : natural := 1;
+    S : String(1..100);
+    R : String(1..100);
+    TYP : Unbounded_String;
+    LENGTH : natural;
+    --Type Tableau_Chaine is array(1..2) of String(100);
+    --n : integer := 1 ;
+    var : integer;
+    casetab : integer := 1;
+    Var_Entier : array(1..100) of Unbounded_String;
+    Var_Booleen : array(1..100) of Unbounded_String;
 
-     Virgule : constant Character_Set := To_Set (',');
-     DeuxPoints : constant Character_Set := To_Set (':');
-     debut : string(1..5);
+    Virgule : constant Character_Set := To_Set (',');
+    DeuxPoints : constant Character_Set := To_Set (':');
 
-   begin
+  begin
      Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
 
+
      while To_String(get_line(File)) /= "Début" loop --Parcours le fichier tant que l'on ne voit pas la fin
+       get_line(File,S,LENGTH);
+       put("test");
+       put_line(S);
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
          get_line(File,S,LENGTH);
-         put_line(S);
          SuprEspace(S,LENGTH);
          while I in 1..LENGTH loop
-           Find_Token
-             (Source  => S(1..LENGTH),
+            Find_Token
+              (Source  => S(1..LENGTH),
               Set     => DeuxPoints,
               From    => I,
               Test    => Outside,
               First   => F,
               Last    => L);
 
-              if var=1 then
-               TYP := To_Unbounded_String(S (F .. L));
-               put_line(To_String(TYP));
-              end if;
-              var := 1;
+            if var=1 then
+             TYP := To_Unbounded_String(S (F .. L));
+             put_line(To_String(TYP));
+            end if;
+            var := 1;
 
            exit when L = 0;
            I := L + 1;
