@@ -23,10 +23,12 @@ package body interversexec is
 
    procedure creer_tableaux_vides is
    begin
+
     for i in 1..20 loop
       tableau_entiers(i) := null;
       tableau_bool(i) := null;
     end loop;
+
    end creer_tableaux_vides;
 
    procedure blocDeclaration(code_intermediaire : in String) is
