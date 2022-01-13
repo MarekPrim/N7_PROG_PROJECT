@@ -1,7 +1,8 @@
 -- XXXX
 with ada.Integer_Text_IO ; use ada.Integer_Text_IO;
 with ada.Text_IO ; use ada.Text_IO;
-with interVersExec;
+with interversexec ;
+with genericite ;
 
 procedure test_01_blocDeclaration is
 
