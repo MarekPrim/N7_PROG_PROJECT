@@ -11,6 +11,9 @@ package body interversexec is
   use booleens;
   --Fin packages de généricité (pour tableaux)
 
+  tableau_entiers : entiers.Tableau_Variables;
+  tableau_bool : booleens.Tableau_Variables;
+
    procedure intermediaire2execution(code_intermediaire : in String) is
    begin
         creer_tableaux_vides;
@@ -19,9 +22,8 @@ package body interversexec is
    end intermediaire2execution;
 
    procedure creer_tableaux_vides is
-
    begin
-    null;
+    
    end creer_tableaux_vides;
 
    procedure blocDeclaration(code_intermediaire : in String) is
