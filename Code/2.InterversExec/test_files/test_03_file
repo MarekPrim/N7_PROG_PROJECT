@@ -1,0 +1,9 @@
+-- Tests affectation de true/false à un booléen (programme correct) :
+
+Programme Facto est
+  bool1, bool2 : Booléen
+
+Début
+  1 bool1 <- true
+  2 bool2 <- false
+Fin

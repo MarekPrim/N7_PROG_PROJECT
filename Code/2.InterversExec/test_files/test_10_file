@@ -1,5 +1,5 @@
--- Ce code intermédiaire calcule la factorielle F d’un entier n
--- avec numéros de ligne
+-- Tests d'un programme, boucle tant que (programme correct) :
+-- Ce programme calcule la factorielle de n (5!)
 
 Programme Facto est
   n, i, Fact, T1, T2, T3 : Entier

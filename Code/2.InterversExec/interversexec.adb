@@ -1,12 +1,26 @@
 -- XXXX
 package body interversexec is
 
+<<<<<<< HEAD
    procedure intermediaire2execution(code_intermediaire : in String) is
+=======
+  -- Packages de généricité (pour tableaux)
+  --  package entiers is new interversexec(Element=> Integer,image => Integer'Image);
+  --  use entiers;
+
+  --  package booleens is new interversexec(Element=> Boolean,image => Boolean'Image);
+  --  use booleens;
+  --Fin packages de généricité (pour tableaux)
+
+   procedure intermediaire2execution(code_intermediaire : in File_Type; un : in Element; deux : in Element) is
+>>>>>>> 4c3412993fe0b08cf4434755f2f1b85a9501e036
    begin
+        creer_tableaux_vides;
         blocDeclaration(code_intermediaire);
         blocPrincipal(code_intermediaire);
    end intermediaire2execution;
 
+<<<<<<< HEAD
    procedure blocDeclaration(code_intermediaire : in String) is
 
      File : File_type;
@@ -81,6 +95,35 @@ package body interversexec is
        end if;
      end loop;
      Close(File);  -- fermeture du fichier
+=======
+   procedure creer_tableaux_vides is
+
+   begin
+    null;
+   end creer_tableaux_vides;
+
+   procedure blocDeclaration(code_intermediaire : in File_Type) is
+
+     --My_file : File ;
+
+   begin
+     --tab_cell_entier : Tableau_Cellule;
+     --tab_entier : T_Variables := ("entier",tab_cell_entier);
+   -- Open(File,In_File,"./test_files/test_01_file");
+   --            -- on ouvre le fichier de nom truc.txt
+   --            -- dans le programme on l'appelle File
+   --  while not End_Of_File(File) loop
+   --     if End_Of_Line(File) then
+   --        Get(F,C); -- on lit un caractere dans File
+   --        New_Line;
+   --     else
+   --        Get(F,C); -- on lit un caractere dans File
+   --        Put(C);   -- on affiche c a l'ecran
+   --     end if;
+   --  end loop;
+   --Close(F);  -- fermeture de f
+    null;
+>>>>>>> 4c3412993fe0b08cf4434755f2f1b85a9501e036
    end blocDeclaration;
 
     procedure blocPrincipal(code_intermediaire : in String) is
@@ -98,7 +141,7 @@ package body interversexec is
 
     end affectation;
 
-    procedure tantQue is
+    procedure tantQue(code_intermediaire : in File_Type; ligne_debut : in integer) is
 
     begin -- tantQue
 
@@ -106,6 +149,7 @@ package body interversexec is
 
     end tantQue;
 
+<<<<<<< HEAD
     procedure SuprEspace(Chaine : in out string ; Long : in out natural) is
       i : integer := 1;
     begin
@@ -120,5 +164,13 @@ package body interversexec is
         end if;
       end loop;
     end SuprEspace;
+=======
+    procedure affichage is
+
+    begin
+      null;
+    end affichage;
+
+>>>>>>> 4c3412993fe0b08cf4434755f2f1b85a9501e036
 
 end interversexec;

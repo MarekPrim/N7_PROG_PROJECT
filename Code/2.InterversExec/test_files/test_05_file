@@ -1,0 +1,11 @@
+-- Tests affectation d'un entier à un entier, avec multiplication (programme correct) :
+
+Programme Facto est
+  pommes, patates : Entier
+
+Début
+  1 pommes <- 2
+  2 patates <- 4 * 2
+  3 pommes <- patates + pommes
+Fin
+

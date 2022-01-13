@@ -3,22 +3,11 @@ WITH ada.Text_IO ; USE ada.Text_IO;
 WITH ada.Integer_Text_IO ; USE ada.Integer_Text_IO;
 WITH Ada.Strings.Unbounded ; USE Ada.Strings.Unbounded;
 WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO;
-WITH ada.Text_IO ; USE ada.Text_IO ;
-WITH ada.Integer_Text_IO ; USE ada.Integer_Text_IO ;
-WITH Ada.Strings.Unbounded ; USE Ada.Strings.Unbounded ;
-WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO ;
-WITH Ada.Strings.Maps ; USE Ada.Strings.Maps ;
-WITH Ada.Strings ; USE Ada.Strings ;
-with Ada.Strings.Fixed; use Ada.Strings.Fixed;
+--with genericite;
 
-generic
-   type Element is private; --Sera des entiers ou des booleens
-   with function image(Item : in Element) return String;
-
-package interversexec is
+package testc_interversexec is
 
    -- Type P_Cellule is access Cellule
-   Type P_Cellule is private;
 
    -- Exceptions
    --Vide : exception;
@@ -32,10 +21,7 @@ package interversexec is
    --post-condition: Le programme est execute sans erreur
    --exception: Fichier incoherent / Ne correspond pas a un fichier de type code intermediaire
    --           Fichier en entree vide
-<<<<<<< HEAD
-   procedure intermediaire2execution(code_intermediaire : in String);
-=======
-   procedure intermediaire2execution(code_intermediaire : in File_Type; un : in Element; deux : in Element);
+   procedure intermediaire2execution(code_intermediaire : in File_Type);
 
    --procedure creer_tableaux_vides
    --semantique: - Crée des Tableaux_Variables vides de tous les types prédéfinis (entiers, booléens)
@@ -46,7 +32,6 @@ package interversexec is
    --post-condition: les tableaux existent, et sont vides
    --exception: aucune
    procedure creer_tableaux_vides;
->>>>>>> 4c3412993fe0b08cf4434755f2f1b85a9501e036
 
    --procedure blocDeclaration
    --Comment R1 : R1.1: Traiter le bloc de déclaration des variables.
@@ -56,7 +41,7 @@ package interversexec is
    --post-condition: XXXXXX
    --exception: Fichier incoherent / Ne correspond pas a un fichier de type code intermediaire
    --           Fichier en entree vide
-   procedure blocDeclaration(code_intermediaire : in String);
+   procedure blocDeclaration(code_intermediaire : in File_Type);
 
    --procedure blocPrincipal
    --Comment R1 : R1.2: Traiter le bloc principal du programme
@@ -66,7 +51,7 @@ package interversexec is
    --post-condition: Le programme est execute sans erreur
    --exception: Fichier incoherent / Ne correspond pas a un fichier de type code intermediaire
    --           Fichier en entree vide
-   procedure blocPrincipal(code_intermediaire : in String);
+   procedure blocPrincipal(code_intermediaire : in File_Type);
 
    --procedure affectation
    --Comment R1.2 : R2.1: Traiter l'affectation de données dans une variable
@@ -97,16 +82,4 @@ package interversexec is
    --exception: aucun variable n'existe
    procedure affichage;
 
-   procedure SuprEspace(Chaine : in out string ; Long : in out natural);
-
-   private
-      Type Cellule;
-      Type P_Cellule is access Cellule;
-      type Cellule is record
-         nom : Unbounded_String;
-         valeur : Element;
-      end record;
-
-      Type Tableau_Variables is array(1..100) of P_Cellule;
-
-end interversexec;
+end testc_interversexec;
