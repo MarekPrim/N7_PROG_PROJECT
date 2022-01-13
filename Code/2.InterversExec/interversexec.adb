@@ -26,7 +26,7 @@ package body interversexec is
 
    procedure creer_tableaux_vides is
    begin
-   
+
     -- On instancie tous les tableaux de variables génériques avec des valeurs nulles
     for i in 1..20 loop
       tableau_entiers(i) := null;
@@ -144,7 +144,6 @@ package body interversexec is
       null;
 
     end tantQue;
-
 
     procedure SuprEspace(Chaine : in out string ; Long : in out natural) is
       i : integer := 1;
