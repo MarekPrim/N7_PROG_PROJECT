@@ -23,7 +23,7 @@ package body interversexec is
 
    procedure creer_tableaux_vides is
    begin
-
+    -- On instancie tous les tableaux de variables génériques avec des valeurs nulles
     for i in 1..20 loop
       tableau_entiers(i) := null;
       tableau_bool(i) := null;
