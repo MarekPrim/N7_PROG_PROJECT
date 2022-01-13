@@ -32,10 +32,7 @@ package interversexec is
    --post-condition: Le programme est execute sans erreur
    --exception: Fichier incoherent / Ne correspond pas a un fichier de type code intermediaire
    --           Fichier en entree vide
-<<<<<<< HEAD
    procedure intermediaire2execution(code_intermediaire : in String);
-=======
-   procedure intermediaire2execution(code_intermediaire : in File_Type; un : in Element; deux : in Element);
 
    --procedure creer_tableaux_vides
    --semantique: - Crée des Tableaux_Variables vides de tous les types prédéfinis (entiers, booléens)
@@ -46,7 +43,6 @@ package interversexec is
    --post-condition: les tableaux existent, et sont vides
    --exception: aucune
    procedure creer_tableaux_vides;
->>>>>>> 4c3412993fe0b08cf4434755f2f1b85a9501e036
 
    --procedure blocDeclaration
    --Comment R1 : R1.1: Traiter le bloc de déclaration des variables.
