@@ -187,7 +187,6 @@ package body interversexec is
 
     end tantQue;
 
-
     procedure SuprEspace(Chaine : in out string ; Long : in out natural) is
       i : integer := 1;
     begin
