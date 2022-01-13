@@ -1,3 +1,1 @@
-blabla
-1 2 3
-aba <- 1
+pommes, patates, carotes : Entier

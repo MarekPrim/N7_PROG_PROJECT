@@ -16,23 +16,24 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLICIT_LOOPS
 RV SPARK_05
 
-U test%b		test.adb		3e5d20e3 NE OO SU IL
+U test_03_tantque%b	test_03_tantque.adb	54179e08 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.strings%s		a-string.ads		a-string.ali
-W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
-W ada.strings.maps%s	a-strmap.adb		a-strmap.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
-W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
+Z ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W interversexec%s	interversexec.adb	interversexec.ali
 Z system%s		system.ads		system.ali
 Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
-Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 
 D ada.ads		20200312110721 76789da1 ada%s
 D a-charac.ads		20200312110721 2d3ec45b ada.characters%s
@@ -43,7 +44,6 @@ D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
 D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
 D a-string.ads		20200312110721 90ac6797 ada.strings%s
-D a-strfix.ads		20200312110721 d07c346e ada.strings.fixed%s
 D a-strmap.ads		20200312110721 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20200312110721 8098c91f ada.strings.unbounded%s
 D a-suteio.ads		20200312110721 26d8e9aa ada.strings.unbounded.text_io%s
@@ -53,6 +53,8 @@ D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D interversexec.ads	20220110163512 84ff25c5 interversexec%s
+D interversexec.adb	20220110164040 005274a0 interversexec%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
@@ -60,8 +62,11 @@ D s-exctab.ads		20200312110721 54135002 system.exception_table%s
 D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
 D s-finmas.ads		20200312110721 7811a767 system.finalization_masters%s
 D s-finroo.ads		20200312110721 4ff27390 system.finalization_root%s
+D s-imgboo.ads		20200312110721 f5d971eb system.img_bool%s
+D s-imgint.ads		20200312110721 02dbe0c2 system.img_int%s
 D s-memory.ads		20200312110721 597d6634 system.memory%s
 D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-pooglo.ads		20200312110721 ede33ef8 system.pool_global%s
 D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
 D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
 D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
@@ -74,80 +79,29 @@ D s-stratt.ads		20200312110721 aedef97e system.stream_attributes%s
 D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
-D test.adb		20220112144453 4e20181b test%b
+D test_03_tantque.adb	20220110163423 aebe8133 test_03_tantque%b
 X 1 ada.ads
-16K9*Ada 20e8 41|2r6 2r24 3r6 3r32 4r6 4r34 5r6 5r42 6r6 6r29 7r6 7r24 8r6
-. 8r29
+16K9*Ada 20e8 45|2r6 2r32 3r6 3r24
 X 6 a-inteio.ads
-18K13*Integer_Text_IO[16|46] 41|3w10 3r36
-X 9 a-string.ads
-16K13*Strings 35e16 41|4r10 4r38 5r10 5r46 6r10 6r33 7w10 7r28 8r10 8r33
-31n32*Outside{31E9} 41|63r23 82r22
-X 10 a-strfix.ads
-18K21*Fixed 251e22 41|8w18 8r41
-102U14*Find_Token 41|59s9 78s9
-103a7 Source{string} 41|60r12 79r12
-104a7 Set{11|46A9} 41|61r12 80r11
-105i7 From{positive} 41|62r12 81r11
-106e7 Test{9|31E9} 41|63r12 82r11
-107i7 First{positive} 41|64r12 83r11
-108i7 Last{natural} 41|65r12 84r11
-X 11 a-strmap.ads
-38K21*Maps 411e21 41|6w18 6r41
-46A9*Character_Set<137A9> 41|44r22 45r25
-99V13*To_Set{46A9} 41|44s39 45s42
-137A9 Character_Set_Internal(boolean)<character>
-X 12 a-strunb.ads
-76K21*Unbounded 491e26 41|4w18 4r46 5r18 5r54
-79R9*Unbounded_String<5|43R9> 474e14 41|35r9 41r33 42r34
-94V13*To_Unbounded_String{79R9} 41|68s20 87s34 90s35
-100V13*To_String{string} 41|69s22 86s12 89s15
-X 13 a-suteio.ads
-39K31*Text_IO 61e34 41|5w28 5r64
-55U14*Put_Line 41|104s5
-X 15 a-textio.ads
-49K13*Text_IO 471e16 41|2w10 2r28
-52P9*File_Type 41|27r10
-53n23*In_File{53E9} 41|51r13
-92U14*Open 41|51s3
-98U14*Close 41|101s3
-168U14*Skip_Line 41|54s7
-171V13*End_Of_Line{boolean} 41|53s8
-183V13*End_Of_File{boolean} 41|52s13
-242U14*Put 41|93s11
-244U14*Get_Line 41|56s7
-263U14*Put_Line 41|69s13
-X 20 system.ads
+18K13*Integer_Text_IO[15|46] 45|2w10 2r36
+X 14 a-textio.ads
+49K13*Text_IO 471e16 45|3w10 3r28
+166U14*New_Line 45|19s1 23s5
+263U14*Put_Line 45|18s1 22s5
+X 19 interversexec.ads
+8+9 Element 45|10r42 13r43
+9V18 image{string} 45|10r60 13r61
+11k9*interversexec 80e18 45|4w6 10r28 13r29
+X 21 system.ads
 67M9*Address
-X 27 s-memory.ads
-53V13*Alloc{20|67M9} 103i<c,__gnat_malloc>22
+X 30 s-memory.ads
+53V13*Alloc{21|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{20|67M9} 105i<c,__gnat_realloc>22
-X 33 s-stalib.adb
+76V13*Realloc{21|67M9} 105i<c,__gnat_realloc>22
+X 37 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
-X 41 test.adb
-10U11*test 10b11 108l5 108t9
-12U13 SuprEspace 12b13 12=24 12=49 25l7 25t17 57s7
-12a24 Chaine{string} 16r10 19m11 19r24
-12i49 Long{natural} 15r15 17m9 17r17 18r21
-13i5 i{integer} 15r11 16r17 18r18 22m9 22r14
-18i13 j{integer} 19r18 19r31
-27p3 File{15|52P9} 51m8 51r8 52r25 53r20 54r17 56r16 101m9 101r9
-30i3 F{positive} 64m23 68r43 77r22 79r28
-30i5 B{positive} 83m22 87r57 90r58
-31i3 L{natural} 65m23 68r48 73r19 74r14
-31i5 C{natural} 84m22 87r62 90r63 96r19 97r14
-32i3 I{natural} 58r13 62r23 74m9
-32i5 A{natural} 77r13 81r22 97m9
-33a3 S{string} 56m21 57m18 57r18 60r23 68r40 79r23 87r54 90r55
-34a3 R{string}
-35r3 TYP{12|79R9} 68m13 69r32 86r22 89r25
-36i3 LENGTH{natural} 56m23 57m20 57r20 58r21 60r28
-39i3 var{integer} 67r15 71m12
-40i3 casetab{integer} 87r22 88m11 88r22 90r23 91m11 91r22
-41a3 Var_Entier(12|79R9) 87m11 104r14
-42a3 Var_Booleen(12|79R9) 90m11
-44a3 Virgule{11|46A9} 80r22
-45a3 DeuxPoints{11|46A9} 61r23
-103i7 i{integer} 104r25
+X 45 test_03_tantque.adb
+8U11*test_03_tantque 8b11 31l5 31t20
+10K13 entiers[19|11] 11r9
+13K13 booleens[19|11] 14r9
 

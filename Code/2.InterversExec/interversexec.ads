@@ -3,6 +3,13 @@ WITH ada.Text_IO ; USE ada.Text_IO;
 WITH ada.Integer_Text_IO ; USE ada.Integer_Text_IO;
 WITH Ada.Strings.Unbounded ; USE Ada.Strings.Unbounded;
 WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO;
+WITH ada.Text_IO ; USE ada.Text_IO ;
+WITH ada.Integer_Text_IO ; USE ada.Integer_Text_IO ;
+WITH Ada.Strings.Unbounded ; USE Ada.Strings.Unbounded ;
+WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO ;
+WITH Ada.Strings.Maps ; USE Ada.Strings.Maps ;
+WITH Ada.Strings ; USE Ada.Strings ;
+with Ada.Strings.Fixed; use Ada.Strings.Fixed;
 
 generic
    type Element is private; --Sera des entiers ou des booleens
@@ -25,7 +32,7 @@ package interversexec is
    --post-condition: Le programme est execute sans erreur
    --exception: Fichier incoherent / Ne correspond pas a un fichier de type code intermediaire
    --           Fichier en entree vide
-   procedure intermediaire2execution(code_intermediaire : in File_Type);
+   procedure intermediaire2execution(code_intermediaire : in String);
 
    --procedure blocDeclaration
    --Comment R1 : R1.1: Traiter le bloc de déclaration des variables.
@@ -35,7 +42,7 @@ package interversexec is
    --post-condition: XXXXXX
    --exception: Fichier incoherent / Ne correspond pas a un fichier de type code intermediaire
    --           Fichier en entree vide
-   procedure blocDeclaration(code_intermediaire : in File_Type);
+   procedure blocDeclaration(code_intermediaire : in String);
 
    --procedure blocPrincipal
    --Comment R1 : R1.2: Traiter le bloc principal du programme
@@ -45,7 +52,7 @@ package interversexec is
    --post-condition: Le programme est execute sans erreur
    --exception: Fichier incoherent / Ne correspond pas a un fichier de type code intermediaire
    --           Fichier en entree vide
-   procedure blocPrincipal(code_intermediaire : in File_Type);
+   procedure blocPrincipal(code_intermediaire : in String);
 
    --procedure affectation
    --Comment R1.2 : R2.1: Traiter l'affectation de données dans une variable
@@ -66,6 +73,8 @@ package interversexec is
    --post-condition: XXXXXXX
    --exception: XXXXXXX
    procedure tantQue;
+
+   procedure SuprEspace(Chaine : in out string ; Long : in out natural);
 
    private
       Type Cellule;
