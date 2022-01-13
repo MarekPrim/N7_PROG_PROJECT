@@ -15,7 +15,6 @@ with genericite;
 package interversexec is
 
    -- Type P_Cellule is access Cellule
-   Type P_Cellule is private;
 
    -- Exceptions
    --Vide : exception;
@@ -91,15 +90,5 @@ package interversexec is
    procedure affichage;
 
    procedure SuprEspace(Chaine : in out string ; Long : in out natural);
-
-   private
-      Type Cellule;
-      Type P_Cellule is access Cellule;
-      type Cellule is record
-         nom : Unbounded_String;
-         valeur : Element;
-      end record;
-
-      Type Tableau_Variables is array(1..100) of P_Cellule;
 
 end interversexec;
