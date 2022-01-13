@@ -10,10 +10,7 @@ WITH Ada.Strings.Unbounded.Text_IO ; USE Ada.Strings.Unbounded.Text_IO ;
 WITH Ada.Strings.Maps ; USE Ada.Strings.Maps ;
 WITH Ada.Strings ; USE Ada.Strings ;
 with Ada.Strings.Fixed; use Ada.Strings.Fixed;
-
-generic
-   type Element is private; --Sera des entiers ou des booleens
-   with function image(Item : in Element) return String;
+with genericite;
 
 package interversexec is
 
