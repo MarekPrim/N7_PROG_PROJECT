@@ -1,5 +1,8 @@
+-- commentaire test
+
 Programme Facto est
   pommes, patates : Entier
+  pommes_2, patates_2 : Entier
 
 Debut
   1 pommes <- 5
