@@ -23,7 +23,7 @@ D a-strmap.ads		20200312110721 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20200312110721 8098c91f ada.strings.unbounded%s
 D a-suteio.ads		20200312110721 26d8e9aa ada.strings.unbounded.text_io%s
 D a-textio.ads		20200312110721 881db35a ada.text_io%s
-D genericite.ads	20220113081954 4336e4f1 genericite%s
+D genericite.ads	20220117093544 4336e4f1 genericite%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
 D system.ads		20200312110721 4635ec04 system%s
