@@ -130,6 +130,7 @@ package body interversexec is
            i_2 := last_2 + 1;
           end loop;
        --end if;
+       case_tab := 1;
        get_line(File,ligne,longueur);
        SuprEspace(ligne,longueur);
      end loop;
