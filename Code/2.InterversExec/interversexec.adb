@@ -62,15 +62,16 @@ package body interversexec is
 
    begin
      Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
-     --loop
 
-     --exit when
-     --end loop;
-     get_line(File,ligne,longueur);
-     SuprEspace(ligne,longueur);
-     put("start line");
-     put_line(ligne);
-     New_Line;
+     loop
+       get_line(File,ligne,longueur);
+       SuprEspace(ligne,longueur);
+       put("start line");
+       put_line(ligne);
+       New_Line;
+     exit when ligne(1..9) = "Programme"
+     end loop;
+
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
