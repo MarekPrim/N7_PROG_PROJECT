@@ -112,31 +112,31 @@ package body interversexec is
 
 
      while To_String(get_line(File)) /= "Début" loop --Parcours le fichier tant que l'on ne voit pas la fin
-       get_line(File,S,LENGTH);
+       get_line(File,ligne,longueur);
        put("test");
        put_line(S);
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
-         get_line(File,S,LENGTH);
-         SuprEspace(S,LENGTH);
-         while I in 1..LENGTH loop
+         get_line(File,ligne,longueur);
+         SuprEspace(ligne,longueur);
+         while I in 1..longueur loop
             Find_Token
-              (Source  => S(1..LENGTH),
+              (Source  => S(1..longueur),
               Set     => DeuxPoints,
               From    => I,
               Test    => Outside,
-              First   => F,
-              Last    => L);
+              First   => first_1,
+              Last    => last_1);
 
-            if var=1 then
-             TYP := To_Unbounded_String(S (F .. L));
+            if variables=1 then
+             var_type := To_Unbounded_String(S (first_1 .. last_1));
              put_line(To_String(TYP));
             end if;
-            var := 1;
+            variables := 1;
 
-           exit when L = 0;
-           I := L + 1;
+           exit when Last_1 = 0;
+           I := Last_1 + 1;
          end loop;
 
          while A in 1..(F-2) loop
@@ -145,14 +145,14 @@ package body interversexec is
              Set     => Virgule,
              From    => A,
              Test    => Outside,
-             First   => B,
-             Last    => C);
+             First   => first_2,
+             Last    => last_2);
 
-           if To_String(TYP) = "Entier" then
-             Var_Entier(casetab) := To_Unbounded_String(S (B .. C));
+           if To_String(var_type) = "Entier" then
+             Var_Entier(casetab) := To_Unbounded_String(S (first_2 .. last_2));
              casetab := casetab + 1;
-           elsif To_String(TYP) = "Booléen" then
-             Var_Booleen(casetab) := To_Unbounded_String(S (B .. C));
+           elsif To_String(var_type) = "Booléen" then
+             Var_Booleen(casetab) := To_Unbounded_String(S (first_2 .. last_2));
              casetab := casetab + 1;
            else
              put("test");
