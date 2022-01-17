@@ -119,11 +119,11 @@ package body interversexec is
        else
          get_line(File,ligne,longueur);
          SuprEspace(ligne,longueur);
-         while I in 1..longueur loop
+         while i_1 in 1..longueur loop
             Find_Token
               (Source  => S(1..longueur),
               Set     => DeuxPoints,
-              From    => I,
+              From    => i_1,
               Test    => Outside,
               First   => first_1,
               Last    => last_1);
@@ -134,15 +134,15 @@ package body interversexec is
             end if;
             variables := 1;
 
-           exit when Last_1 = 0;
-           I := Last_1 + 1;
+           exit when last_1 = 0;
+           i_1 := last_1 + 1;
          end loop;
 
-         while A in 1..(F-2) loop
+         while i_2 in 1..(first_1-2) loop
            Find_Token
-             (Source  => S(1..F-2),
-             Set     => Virgule,
-             From    => A,
+             (Source  => ligne(1..first_1-2),
+             Set     => virgule,
+             From    => i_2,
              Test    => Outside,
              First   => first_2,
              Last    => last_2);
@@ -160,8 +160,8 @@ package body interversexec is
              New_Line;
            end if;
 
-           exit when C = 0;
-           A := C + 1;
+           exit when last_2 = 0;
+           i_2 := last_2 + 1;
           end loop;
        end if;
      end loop;
