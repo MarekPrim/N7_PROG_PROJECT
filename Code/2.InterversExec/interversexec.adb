@@ -74,14 +74,13 @@ package body interversexec is
 
      get_line(File,ligne,longueur);
      SuprEspace(ligne,longueur);
-     put("First line :");
-     put_line(ligne(1..longueur));
-     New_Line;
+
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
        --if End_Of_Line(File) then --Test si c'est la fin de la ligne
       --   Skip_Line(File);
     --else
-         put_line("recoucou");
+
+         variables := 0;
          while i_1 in 1..longueur loop
             Find_Token
               (Source  => ligne(1..longueur),
@@ -91,12 +90,8 @@ package body interversexec is
               First   => first_1,
               Last    => last_1);
 
-              put("test_01");
-              New_Line;
-
             if variables=1 then
              var_type := To_Unbounded_String(ligne(first_1 .. last_1));
-             put_line(var_type);
             end if;
             variables := 1;
 
@@ -107,38 +102,24 @@ package body interversexec is
          while i_2 in 1..(first_1-2) loop
            Find_Token
              --(Source  => ligne(1..(first_1 - 2)),
-             (Source  => ligne(1..longueur),
+             (Source  => ligne(1..(first_1-2)),
              Set     => virgule,
              From    => i_2,
              Test    => Outside,
              First   => first_2,
              Last    => last_2);
 
-             put_line(ligne(1..longueur));
-
-             put_line(To_String(var_type));
-             put("test_02");
-             New_Line;
-
            if To_String(var_type) = "Entier" then
              p_cell_entier := new entiers.Cellule;
              p_cell_entier.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
              tableau_entiers(case_tab) := p_cell_entier;
-             put(first_2,0);
-             put(" - ");
-             put(last_2,0);
-             New_Line;
-             put_line(tableau_entiers(case_tab).all.nom);
+             --put_line(tableau_entiers(case_tab).all.nom);
              case_tab := case_tab + 1;
            elsif To_String(var_type) = "Booléen" then
              p_cell_booleen := new booleens.Cellule;
              p_cell_booleen.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
              tableau_bool(case_tab) := p_cell_booleen;
-             put(first_2,0);
-             put(" - ");
-             put(last_2,0);
-             New_Line;
-             put_line(tableau_bool(case_tab).all.nom);
+             --put_line(tableau_bool(case_tab).all.nom);
              case_tab := case_tab + 1;
            else
              put("Erreur : Type Incorrect");
@@ -151,11 +132,7 @@ package body interversexec is
        --end if;
        get_line(File,ligne,longueur);
        SuprEspace(ligne,longueur);
-       put("Ligne suivante :");
-       put_line(ligne(1..longueur));
-       New_Line;
      end loop;
-     put_line("coucou");
      Close(File);  -- fermeture du fichier
 
    end blocDeclaration;
