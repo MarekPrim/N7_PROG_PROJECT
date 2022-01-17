@@ -85,7 +85,7 @@ package body interversexec is
 
             if variables=1 then
              var_type := To_Unbounded_String(ligne(first_1 .. last_1));
-             put_line(var_type(first_1..last_1));
+             put_line(var_type);
             end if;
             variables := 1;
 
