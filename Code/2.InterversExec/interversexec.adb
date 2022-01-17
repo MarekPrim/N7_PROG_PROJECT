@@ -90,7 +90,7 @@ package body interversexec is
               First   => first_1,
               Last    => last_1);
 
-              put("test");
+              put("test_01");
               New_Line;
 
             if variables=1 then
@@ -116,7 +116,7 @@ package body interversexec is
              put_line(ligne(1..longueur));
 
              put_line(To_String(var_type));
-             put("test");
+             put("test_02");
              New_Line;
 
            if To_String(var_type) = "Entier" then
