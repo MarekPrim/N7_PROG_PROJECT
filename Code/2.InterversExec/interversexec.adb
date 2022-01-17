@@ -149,14 +149,6 @@ package body interversexec is
            i_2 := last_2 + 1;
           end loop;
        end if;
-<<<<<<< HEAD
-       get_line(File,ligne,longueur);
-       SuprEspace(ligne,longueur);
-       put("end line:");
-       put_line(ligne(1..longueur));
-       New_Line;
-=======
->>>>>>> 08829cbb22abdfda4b328b84bc8e46d528aab564
      end loop;
      put_line("coucou");
      Close(File);  -- fermeture du fichier
