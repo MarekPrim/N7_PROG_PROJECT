@@ -79,9 +79,9 @@ package body interversexec is
      New_Line;
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
-         put_line("recoucou");
          Skip_Line(File);
        else
+         put_line("recoucou");
          while i_1 in 1..longueur loop
             Find_Token
               (Source  => ligne(1..longueur),
