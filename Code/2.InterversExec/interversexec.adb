@@ -78,6 +78,12 @@ package body interversexec is
 
    end creer_tableaux_vides;
 
+
+
+
+
+
+
    procedure blocDeclaration(code_intermediaire : in String) is
 
      File : File_type;
@@ -163,6 +169,14 @@ package body interversexec is
      Close(File);  -- fermeture du fichier
 
    end blocDeclaration;
+
+
+
+
+
+
+
+
 
     procedure blocPrincipal(code_intermediaire : in String) is
     begin
