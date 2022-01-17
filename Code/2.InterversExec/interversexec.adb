@@ -56,7 +56,7 @@ package body interversexec is
      --Type Tableau_Chaine is array(1..2) of String(100);
      --n : integer := 1 ;
      variables : integer;
-     casetab : integer := 1;
+     case_tab : integer := 1;
      tableau_entiers : array(1..100) of Unbounded_String;
      tableau_bool : array(1..100) of Unbounded_String;
 
@@ -103,11 +103,11 @@ package body interversexec is
              Last    => last_2);
 
            if To_String(var_type) = "Entier" then
-             tableau_entiers(casetab) := To_Unbounded_String(ligne(first_2 .. last_2));
-             casetab := casetab + 1;
+             tableau_entiers(case_tab) := To_Unbounded_String(ligne(first_2 .. last_2));
+             case_tab := case_tab + 1;
            elsif To_String(var_type) = "Booléen" then
              tableau_bool(casetab) := To_Unbounded_String(ligne(first_2 .. last_2));
-             casetab := casetab + 1;
+             case_tab := case_tab + 1;
            else
              put("test");
              put("Erreur : Type Incorrect");
