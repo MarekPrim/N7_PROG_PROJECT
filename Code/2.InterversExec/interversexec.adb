@@ -66,10 +66,10 @@ package body interversexec is
 
      loop
        get_line(File,ligne,longueur);
-       SuprEspace(ligne,longueur);
-       put("start line: ");
-       put_line(ligne(1..longueur));
-       New_Line;
+       --SuprEspace(ligne,longueur);
+       --put("start line: ");
+       --put_line(ligne(1..longueur));
+       --New_Line;
      exit when ligne(1..9) = "Programme";
      end loop;
 
@@ -147,7 +147,25 @@ package body interversexec is
 
     procedure blocPrincipal(code_intermediaire : in String) is
     begin
-        null;
+
+
+      loop
+        get_line(File,ligne,longueur);
+      exit when ligne(1..5) = "Debut";
+      end loop;
+
+      get_line(File,ligne,longueur);
+      --SuprEspace(ligne,longueur);
+
+      while ligne(1..3) /= "Fin" loop
+        if AFFECTATION then
+          affectation(ligne);
+        else if TANTQUE then
+          tantQue(code_intermediaire, ligne);
+        else
+          null; --Ne doit jamais passer ici ou lever une erreur
+        end if;
+      end loop;
     end blocPrincipal;
 
     procedure affectation(ligne : in String) is
