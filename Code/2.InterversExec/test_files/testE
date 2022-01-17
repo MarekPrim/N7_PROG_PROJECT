@@ -2,7 +2,7 @@
 
 Programme Facto est
   bool_1, bool_2 : Booleen
-  pommes, patates, carottes : Entier
+  pomme, patate, carottes : Entier
 
 Debut
   1 pommes <- 5
