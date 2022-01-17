@@ -42,7 +42,7 @@ package body interversexec is
      -----FILE------
      first_1, first_2 : positive ;
      last_1, last_2 : natural ;
-     i_1, i_2 : natural := 1;
+     i_1, i_2 : natural;
      ligne : String(1..100);
      var_type : Unbounded_String;
      longueur : natural;
