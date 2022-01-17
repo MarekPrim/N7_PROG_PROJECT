@@ -23,21 +23,6 @@ package body interversexec is
 
   procedure creer_tableaux_vides is
   begin
-  for i in 1..20 loop
-    tableau_entiers(i) := null;
-    tableau_bool(i) := null;
-  end loop;
-  end creer_tableaux_vides;
-
-  procedure intermediaire2execution(code_intermediaire : in String) is
-  begin
-      creer_tableaux_vides;
-      blocDeclaration(code_intermediaire);
-      blocPrincipal(code_intermediaire);
-  end intermediaire2execution;
-
-  procedure creer_tableaux_vides is
-  begin
 
     -- On instancie tous les tableaux de variables génériques avec des valeurs nulles
     for i in 1..20 loop
