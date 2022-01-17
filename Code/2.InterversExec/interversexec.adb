@@ -99,7 +99,7 @@ package body interversexec is
               Last    => last_1);
 
             if variables=1 then
-             var_type := To_Unbounded_String(S (first_1 .. last_1));
+             var_type := To_Unbounded_String(ligne(first_1 .. last_1));
              put_line(To_String(var_type));
             end if;
             variables := 1;
