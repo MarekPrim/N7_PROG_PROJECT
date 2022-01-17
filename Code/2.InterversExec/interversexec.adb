@@ -63,8 +63,16 @@ package body interversexec is
    begin
      Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
 
-
-     while To_String(get_line(File)) /= "Début" loop --Parcours le fichier tant que l'on ne voit pas la fin
+     debut := get_line(File)(1..5);
+     put("Debut - ");
+     put(debut);
+     New_Line;
+     debut := get_line(File)(1..5);
+     put("Debut - ");
+     put(debut);
+     New_Line;
+     while debut /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
+       debut := get_line(File)(1..5);
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
