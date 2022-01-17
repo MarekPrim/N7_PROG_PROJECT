@@ -69,7 +69,7 @@ package body interversexec is
        put("start line");
        put_line(ligne);
        New_Line;
-     exit when ligne(1..9) = "Programme"
+     exit when ligne(1..9) = "Programme";
      end loop;
 
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
