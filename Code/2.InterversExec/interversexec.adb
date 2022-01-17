@@ -115,7 +115,7 @@ package body interversexec is
              tableau_entiers(case_tab) := p_cell_entier;
              put_line(tableau_entiers(case_tab).all.nom);
              case_tab := case_tab + 1;
-           elsif To_String(var_type) = "Booléen" then
+           elsif To_String(var_type) = "Booleen" then
              p_cell_booleen := new booleens.Cellule;
              p_cell_booleen.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
              tableau_bool(case_tab) := p_cell_booleen;
