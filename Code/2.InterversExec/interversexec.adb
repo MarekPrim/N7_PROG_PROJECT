@@ -77,10 +77,11 @@ package body interversexec is
      SuprEspace(ligne,longueur);
 
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
-       --if End_Of_Line(File) then --Test si c'est la fin de la ligne
-      --   Skip_Line(File);
-    --else
-         i_1, i_2 := 1;
+      if End_Of_Line(File) then --Test si c'est la fin de la ligne
+         null;
+       else
+         i_1 := 1;
+         i_2 := 1;
          variables := 0;
          while i_1 in 1..longueur loop
             Find_Token
@@ -93,10 +94,11 @@ package body interversexec is
 
             if variables=1 then
              var_type := To_Unbounded_String(ligne(first_1 .. last_1));
+             put_line(var_type);
             end if;
             variables := 1;
 
-           exit when last_1 = 0;
+           --exit when last_1 = 0;
            i_1 := last_1 + 1;
          end loop;
 
@@ -110,27 +112,32 @@ package body interversexec is
              First   => first_2,
              Last    => last_2);
 
+
            if To_String(var_type) = "Entier" then
              p_cell_entier := new entiers.Cellule;
              p_cell_entier.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
              tableau_entiers(case_tab_entier) := p_cell_entier;
              put_line(tableau_entiers(case_tab_entier).all.nom);
+             put("type variable entier: ");
+             put_line(var_type);
              case_tab_entier := case_tab_entier + 1;
            elsif To_String(var_type) = "Booleen" then
              p_cell_booleen := new booleens.Cellule;
              p_cell_booleen.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
              tableau_bool(case_tab_booleen) := p_cell_booleen;
              put_line(tableau_bool(case_tab_booleen).all.nom);
+             put("type variable bool: ");
+             put_line(var_type);
              case_tab_booleen := case_tab_booleen + 1;
            else
              put("Erreur : Type Incorrect");
              New_Line;
            end if;
 
-           exit when last_2 = 0;
+           --exit when last_2 = 0;
            i_2 := last_2 + 1;
           end loop;
-       --end if;
+       end if;
        get_line(File,ligne,longueur);
        SuprEspace(ligne,longueur);
      end loop;
