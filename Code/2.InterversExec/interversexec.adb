@@ -91,7 +91,7 @@ package body interversexec is
      -----FILE------
      first_1, first_2 : positive ;
      last_1, last_2 : natural ;
-     I,A : natural := 1;
+     i_1, i_2 : natural := 1;
      ligne : String(1..100);
      var_type : Unbounded_String;
      longueur : natural;
@@ -99,11 +99,11 @@ package body interversexec is
      --n : integer := 1 ;
      variables : integer;
      casetab : integer := 1;
-     Var_Entier : array(1..100) of Unbounded_String;
-     Var_Booleen : array(1..100) of Unbounded_String;
+     tableau_entiers : array(1..100) of Unbounded_String;
+     tableau_bool : array(1..100) of Unbounded_String;
 
-     Virgule : constant Character_Set := To_Set (',');
-     DeuxPoints : constant Character_Set := To_Set (':');
+     virgule : constant Character_Set := To_Set (',');
+     deuxPoints : constant Character_Set := To_Set (':');
      debut : string(1..5);
 
    begin
