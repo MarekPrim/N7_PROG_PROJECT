@@ -85,6 +85,9 @@ package body interversexec is
               First   => first_1,
               Last    => last_1);
 
+              put("test");
+              New_Line;
+
             if variables=1 then
              var_type := To_Unbounded_String(ligne(first_1 .. last_1));
              put_line(var_type);
@@ -109,6 +112,7 @@ package body interversexec is
 
              put_line(To_String(var_type));
              put("test");
+             New_Line;
 
            if To_String(var_type) = "Entier" then
              p_cell_entier := new entiers.Cellule;
