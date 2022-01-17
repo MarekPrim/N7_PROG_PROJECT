@@ -78,6 +78,7 @@ package body interversexec is
      put_line(ligne(1..longueur));
      New_Line;
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
+       put("recoucou");
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
