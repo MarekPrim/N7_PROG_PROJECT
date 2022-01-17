@@ -14,6 +14,7 @@ begin
     Put_Line ("Tests affectation d'entiers à des entiers (programme correct) : ");
     New_Line;
     blocDeclaration(fichier_test);
+    creer_tableaux_vides;
 
 
 end test_03_blocdeclaration;
