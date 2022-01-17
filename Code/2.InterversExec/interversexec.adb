@@ -109,14 +109,14 @@ package body interversexec is
              put_line(tableau_entiers(case_tab).all.nom);
              case_tab := case_tab + 1;
            elsif To_String(var_type) = "Booléen" then
-             p_cell_booleen := new entiers.Cellule;
+             p_cell_booleen := new booleens.Cellule;
              p_cell_booleen.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
              tableau_bool(case_tab) := p_cell_booleen;
              put(first_2,0);
              put(" - ");
              put(last_2,0);
              New_Line;
-             put_line(tableau_booleen(case_tab).all.nom);
+             put_line(tableau_bool(case_tab).all.nom);
              case_tab := case_tab + 1;
            else
              put("Erreur : Type Incorrect");
