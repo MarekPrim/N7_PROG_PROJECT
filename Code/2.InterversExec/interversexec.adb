@@ -23,12 +23,15 @@ package body interversexec is
 
   procedure creer_tableaux_vides is
   begin
+<<<<<<< HEAD
     put_line(tableau_entiers(1).all.nom);
+=======
+>>>>>>> 56b95e4a1218abae0103ce7ce065792cb0be5a2f
     -- On instancie tous les tableaux de variables génériques avec des valeurs nulles
-    --for i in 1..20 loop
-    --  tableau_entiers(i) := null;
-    --  tableau_bool(i) := null;
-   --end loop;
+    for i in 1..20 loop
+      tableau_entiers(i) := null;
+      tableau_bool(i) := null;
+    end loop;
 
       -- On remet le compteur de variables à 0, pour chaque type
       --nombre_entiers := 0;
