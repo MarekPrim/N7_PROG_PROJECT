@@ -106,7 +106,7 @@ package body interversexec is
              tableau_entiers(case_tab) := To_Unbounded_String(ligne(first_2 .. last_2));
              case_tab := case_tab + 1;
            elsif To_String(var_type) = "Booléen" then
-             tableau_bool(casetab) := To_Unbounded_String(ligne(first_2 .. last_2));
+             tableau_bool(case_tab) := To_Unbounded_String(ligne(first_2 .. last_2));
              case_tab := case_tab + 1;
            else
              put("test");
