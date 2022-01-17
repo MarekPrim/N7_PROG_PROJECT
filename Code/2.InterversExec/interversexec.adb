@@ -31,8 +31,8 @@ package body interversexec is
     end loop;
 
       -- On remet le compteur de variables à 0, pour chaque type
-      nombre_entiers := 0;
-      nombre_booleens := 0;
+      --nombre_entiers := 0;
+      --nombre_booleens := 0;
 
   end creer_tableaux_vides;
 
@@ -103,10 +103,10 @@ package body interversexec is
              Last    => last_2);
 
            if To_String(var_type) = "Entier" then
-             Var_Entier(casetab) := To_Unbounded_String(S (first_2 .. last_2));
+             tableau_entiers(casetab) := To_Unbounded_String(ligne(first_2 .. last_2));
              casetab := casetab + 1;
            elsif To_String(var_type) = "Booléen" then
-             Var_Booleen(casetab) := To_Unbounded_String(S (first_2 .. last_2));
+             tableau_bool(casetab) := To_Unbounded_String(ligne(first_2 .. last_2));
              casetab := casetab + 1;
            else
              put("test");
