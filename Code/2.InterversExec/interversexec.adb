@@ -49,7 +49,8 @@ package body interversexec is
      --Type Tableau_Chaine is array(1..2) of String(100);
      --n : integer := 1 ;
      variables : integer;
-     case_tab : integer := 1;
+     case_tab_entier : integer := 1;
+     case_tab_booleen : integer := 1;
      --tableau_entiers : array(1..100) of Unbounded_String;
      --tableau_bool : array(1..100) of Unbounded_String;
 
@@ -112,15 +113,15 @@ package body interversexec is
            if To_String(var_type) = "Entier" then
              p_cell_entier := new entiers.Cellule;
              p_cell_entier.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
-             tableau_entiers(case_tab) := p_cell_entier;
-             put_line(tableau_entiers(case_tab).all.nom);
-             case_tab := case_tab + 1;
+             tableau_entiers(case_tab_entier) := p_cell_entier;
+             put_line(tableau_entiers(case_tab_entier).all.nom);
+             case_tab_entier := case_tab_entier + 1;
            elsif To_String(var_type) = "Booleen" then
              p_cell_booleen := new booleens.Cellule;
              p_cell_booleen.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
-             tableau_bool(case_tab) := p_cell_booleen;
-             put_line(tableau_bool(case_tab).all.nom);
-             case_tab := case_tab + 1;
+             tableau_bool(case_tab_booleen) := p_cell_booleen;
+             put_line(tableau_bool(case_tab_booleen).all.nom);
+             case_tab_booleen := case_tab_booleen + 1;
            else
              put("Erreur : Type Incorrect");
              New_Line;
@@ -130,7 +131,6 @@ package body interversexec is
            i_2 := last_2 + 1;
           end loop;
        --end if;
-       case_tab := 1;
        get_line(File,ligne,longueur);
        SuprEspace(ligne,longueur);
      end loop;
