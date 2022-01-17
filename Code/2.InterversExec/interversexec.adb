@@ -29,39 +29,15 @@ package body interversexec is
   end loop;
   end creer_tableaux_vides;
 
-  procedure blocDeclaration(code_intermediaire : in String) is
-
-    File : File_type;
-
-    -----FILE------
-    F,B : positive ;
-    L,C : natural ;
-    I,A : natural := 1;
-    S : String(1..100);
-    R : String(1..100);
-    TYP : Unbounded_String;
-    LENGTH : natural;
-    --Type Tableau_Chaine is array(1..2) of String(100);
-    --n : integer := 1 ;
-    var : integer;
-    casetab : integer := 1;
-    Var_Entier : array(1..100) of Unbounded_String;
-    Var_Booleen : array(1..100) of Unbounded_String;
-
-    Virgule : constant Character_Set := To_Set (',');
-    DeuxPoints : constant Character_Set := To_Set (':');
-
+  procedure intermediaire2execution(code_intermediaire : in String) is
   begin
+      creer_tableaux_vides;
+      blocDeclaration(code_intermediaire);
+      blocPrincipal(code_intermediaire);
+  end intermediaire2execution;
 
-   procedure intermediaire2execution(code_intermediaire : in String) is
-   begin
-        creer_tableaux_vides;
-        blocDeclaration(code_intermediaire);
-        blocPrincipal(code_intermediaire);
-   end intermediaire2execution;
-
-   procedure creer_tableaux_vides is
-   begin
+  procedure creer_tableaux_vides is
+  begin
 
     -- On instancie tous les tableaux de variables génériques avec des valeurs nulles
     for i in 1..20 loop
@@ -69,11 +45,11 @@ package body interversexec is
       tableau_bool(i) := null;
     end loop;
 
-    -- On remet le compteur de variables à 0, pour chaque type
-    nombre_entiers := 0;
-    nombre_booleens := 0;
+      -- On remet le compteur de variables à 0, pour chaque type
+      nombre_entiers := 0;
+      nombre_booleens := 0;
 
-   end creer_tableaux_vides;
+  end creer_tableaux_vides;
 
 
 
@@ -108,9 +84,6 @@ package body interversexec is
 
 
      while To_String(get_line(File)) /= "Début" loop --Parcours le fichier tant que l'on ne voit pas la fin
-       get_line(File,ligne,longueur);
-       put("test");
-       put_line(ligne);
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
