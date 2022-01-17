@@ -7,7 +7,7 @@ RN
 RV NO_IO
 RV SPARK_05
 
-U test_03_blocdeclaration%b  test_03_blocdeclaration.adb  ef633ace NE OO SU IL
+U test_03_blocdeclaration%b  test_03_blocdeclaration.adb  abdab6a5 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -53,7 +53,7 @@ D s-stratt.ads		20200312110721 aedef97e system.stream_attributes%s
 D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
-D test_03_blocdeclaration.adb  20220113083222 39beb8cc test_03_blocdeclaration%b
+D test_03_blocdeclaration.adb  20220117102802 7d0734a7 test_03_blocdeclaration%b
 X 1 ada.ads
 16K9*Ada 20e8 41|2r6 2r32 3r6 3r24
 X 6 a-inteio.ads
@@ -64,8 +64,9 @@ X 15 a-textio.ads
 263U14*Put_Line 41|14s5
 X 21 interversexec.ads
 11K9*interversexec 88e18 41|4w6 4r26
+35U14*creer_tableaux_vides 41|17s5
 45U14*blocDeclaration 41|16s5
 X 41 test_03_blocdeclaration.adb
-6U11*test_03_blocdeclaration 6b11 19l5 19t28
+6U11*test_03_blocdeclaration 6b11 20l5 20t28
 8a5 fichier_test{string} 16r21
 
