@@ -71,12 +71,15 @@ package body interversexec is
      put("Debut - ");
      put(debut);
      New_Line;
-     while debut /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
-       debut := get_line(File)(1..5);
+     --loop
+
+     --exit when
+     --end loop;
+     get_line(File,ligne,longueur);
+     while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
-         get_line(File,ligne,longueur);
          SuprEspace(ligne,longueur);
          while i_1 in 1..longueur loop
             Find_Token
@@ -135,6 +138,7 @@ package body interversexec is
            i_2 := last_2 + 1;
           end loop;
        end if;
+       get_line(File,ligne,longueur);
      end loop;
      Close(File);  -- fermeture du fichier
 
