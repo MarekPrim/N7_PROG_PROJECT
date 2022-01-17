@@ -140,6 +140,7 @@ package body interversexec is
        end if;
        get_line(File,ligne,longueur);
      end loop;
+     put_line("coucou");
      Close(File);  -- fermeture du fichier
 
    end blocDeclaration;
