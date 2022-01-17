@@ -1,8 +1,8 @@
 -- commentaire test
 
 Programme Facto est
-  pommes, patates : Entier
-  pommes_2, patates_2 : Entier
+  pommes, patates, carottes : Entier
+  bool_1, bool_2 : Booléen
 
 Debut
   1 pommes <- 5
