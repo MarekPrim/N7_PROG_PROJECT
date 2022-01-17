@@ -23,7 +23,6 @@ package body interversexec is
 
   procedure creer_tableaux_vides is
   begin
-    put("coucou");
     put_line(tableau_entiers(1).all.nom);
     -- On instancie tous les tableaux de variables génériques avec des valeurs nulles
     --for i in 1..20 loop
@@ -110,19 +109,22 @@ package body interversexec is
              p_cell_entier := new entiers.Cellule;
              p_cell_entier.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
              tableau_entiers(case_tab) := p_cell_entier;
-             case_tab := case_tab + 1;
              put(first_2,0);
              put(" - ");
              put(last_2,0);
              New_Line;
-             put_line(p_cell_entier.all.nom);
-             --put("ligne: ");
-             --put_line(tableau_entiers(case_tab).all.nom);
+             put_line(tableau_entiers(case_tab).all.nom);
+             case_tab := case_tab + 1;
            elsif To_String(var_type) = "Booléen" then
-
-             --tableau_bool.all.nom(case_tab) := To_Unbounded_String(ligne(first_2 .. last_2));
-             --case_tab := case_tab + 1;
-             null;
+             p_cell_booleen := new entiers.Cellule;
+             p_cell_booleen.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
+             tableau_bool(case_tab) := p_cell_booleen;
+             put(first_2,0);
+             put(" - ");
+             put(last_2,0);
+             New_Line;
+             put_line(tableau_booleen(case_tab).all.nom);
+             case_tab := case_tab + 1;
            else
              put("Erreur : Type Incorrect");
              New_Line;
