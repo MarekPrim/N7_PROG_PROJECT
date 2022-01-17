@@ -57,12 +57,15 @@ package body interversexec is
      --n : integer := 1 ;
      variables : integer;
      case_tab : integer := 1;
-     tableau_entiers : array(1..100) of Unbounded_String;
-     tableau_bool : array(1..100) of Unbounded_String;
+     --tableau_entiers : array(1..100) of Unbounded_String;
+     --tableau_bool : array(1..100) of Unbounded_String;
 
      virgule : constant Character_Set := To_Set (',');
      deuxPoints : constant Character_Set := To_Set (':');
      debut : string(1..5);
+
+     p_cell_entier : entiers.P_cellule;
+     p_cell_booleen : booleens.P_cellule;
 
    begin
      Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
@@ -103,15 +106,24 @@ package body interversexec is
              Last    => last_2);
 
            if To_String(var_type) = "Entier" then
-             tableau_entiers(case_tab) := To_Unbounded_String(ligne(first_2 .. last_2));
+             p_cell_entier := new entiers.Cellule;
+             p_cell_entier.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
+             tableau_entiers(case_tab) := p_cell_entier;
              case_tab := case_tab + 1;
+             put(first_2);
+             put(" - ");
+             put(last_2);
+             New_Line;
+             put_line(p_cell_entier.all.nom);
+             --put("ligne: ");
+             --put_line(tableau_entiers(case_tab).all.nom);
            elsif To_String(var_type) = "Booléen" then
-             tableau_bool(case_tab) := To_Unbounded_String(ligne(first_2 .. last_2));
-             case_tab := case_tab + 1;
+
+             --tableau_bool.all.nom(case_tab) := To_Unbounded_String(ligne(first_2 .. last_2));
+             --case_tab := case_tab + 1;
+             null;
            else
-             put("test");
              put("Erreur : Type Incorrect");
-             put("test----");
              New_Line;
            end if;
 
