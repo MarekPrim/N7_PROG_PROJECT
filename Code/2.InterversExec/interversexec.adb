@@ -16,9 +16,9 @@ package body interversexec is
 
   procedure intermediaire2execution(code_intermediaire : in String) is
   begin
-      creer_tableaux_vides;
-      blocDeclaration(code_intermediaire);
-      blocPrincipal(code_intermediaire);
+    creer_tableaux_vides;
+    blocDeclaration(code_intermediaire);
+    blocPrincipal(code_intermediaire);
   end intermediaire2execution;
 
   procedure creer_tableaux_vides is
@@ -29,143 +29,125 @@ package body interversexec is
       tableau_bool(i) := null;
     end loop;
 
-      -- On remet le compteur de variables à 0, pour chaque type
-      --nombre_entiers := 0;
-      --nombre_booleens := 0;
+    -- On remet le compteur de variables à 0, pour chaque type
+    --nombre_entiers := 0;
+    --nombre_booleens := 0;
 
   end creer_tableaux_vides;
 
-   procedure blocDeclaration(code_intermediaire : in String) is
+  procedure blocDeclaration(code_intermediaire : in String) is
 
-     File : File_type;
+    File : File_type;
 
-     -----FILE------
-     first_1, first_2 : positive ;
-     last_1, last_2 : natural ;
-     i_1, i_2 : natural;
-     ligne : String(1..100);
-     var_type : Unbounded_String;
-     longueur : natural;
-     --Type Tableau_Chaine is array(1..2) of String(100);
-     --n : integer := 1 ;
-     variables : integer;
-     case_tab_entier : integer := 1;
-     case_tab_booleen : integer := 1;
-     --tableau_entiers : array(1..100) of Unbounded_String;
-     --tableau_bool : array(1..100) of Unbounded_String;
+    -----FILE------
+    first_1, first_2 : positive ;
+    last_1, last_2 : natural ;
+    i_1, i_2 : natural;
+    ligne : String(1..100);
+    var_type : Unbounded_String;
+    longueur : natural;
+    --Type Tableau_Chaine is array(1..2) of String(100);
+    --n : integer := 1 ;
+    variables : integer;
+    case_tab_entier : integer := 1;
+    case_tab_booleen : integer := 1;
+    --tableau_entiers : array(1..100) of Unbounded_String;
+    --tableau_bool : array(1..100) of Unbounded_String;
 
-     virgule : constant Character_Set := To_Set (',');
-     deuxPoints : constant Character_Set := To_Set (':');
-     debut : string(1..5);
+    virgule : constant Character_Set := To_Set (',');
+    deuxPoints : constant Character_Set := To_Set (':');
+    debut : string(1..5);
 
-     p_cell_entier : entiers.P_cellule;
-     p_cell_booleen : booleens.P_cellule;
+    p_cell_entier : entiers.P_cellule;
+    p_cell_booleen : booleens.P_cellule;
 
-   begin
-     Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
+  begin
+    Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
 
-     loop
-       get_line(File,ligne,longueur);
-       --SuprEspace(ligne,longueur);
-       --put("start line: ");
-       --put_line(ligne(1..longueur));
-       --New_Line;
-     exit when ligne(1..9) = "Programme";
-     end loop;
+    loop
+      get_line(File,ligne,longueur);
+      SuprEspace(ligne,longueur);
+      put("start line: ");
+      put_line(ligne(1..longueur));
+      New_Line;
+      exit when ligne(1..9) = "Programme";
+    end loop;
 
-     get_line(File,ligne,longueur);
-     SuprEspace(ligne,longueur);
+    get_line(File,ligne,longueur);
+    SuprEspace(ligne,longueur);
 
-     while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
+    while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
       if End_Of_Line(File) then --Test si c'est la fin de la ligne
-         null;
-       else
-         i_1 := 1;
-         i_2 := 1;
-         variables := 0;
-         while i_1 in 1..longueur loop
-            Find_Token
-              (Source  => ligne(1..longueur),
-              Set     => DeuxPoints,
-              From    => i_1,
-              Test    => Outside,
-              First   => first_1,
-              Last    => last_1);
+        null;
+      else
+        i_1 := 1;
+        i_2 := 1;
+        variables := 0;
+        while i_1 in 1..longueur loop
+          Find_Token
+          (Source  => ligne(1..longueur),
+          Set     => DeuxPoints,
+          From    => i_1,
+          Test    => Outside,
+          First   => first_1,
+          Last    => last_1);
 
-            if variables=1 then
-             var_type := To_Unbounded_String(ligne(first_1 .. last_1));
-             put_line(var_type);
+          if variables=1 then
+            var_type := To_Unbounded_String(ligne(first_1 .. last_1));
+            put_line(var_type);
+          end if;
+          variables := 1;
+
+          --exit when last_1 = 0;
+          i_1 := last_1 + 1;
+        end loop;
+
+        while i_2 in 1..(first_1-2) loop
+          Find_Token
+          --(Source  => ligne(1..(first_1 - 2)),
+          (Source  => ligne(1..(first_1-2)),
+          Set     => virgule,
+          From    => i_2,
+          Test    => Outside,
+          First   => first_2,
+          Last    => last_2);
+
+
+          if To_String(var_type) = "Entier" then
+            p_cell_entier := new entiers.Cellule;
+            p_cell_entier.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
+            tableau_entiers(case_tab_entier) := p_cell_entier;
+            put_line(tableau_entiers(case_tab_entier).all.nom);
+            put("type variable entier: ");
+            put_line(var_type);
+            case_tab_entier := case_tab_entier + 1;
+            elsif To_String(var_type) = "Booleen" then
+              p_cell_booleen := new booleens.Cellule;
+              p_cell_booleen.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
+              tableau_bool(case_tab_booleen) := p_cell_booleen;
+              put_line(tableau_bool(case_tab_booleen).all.nom);
+              put("type variable bool: ");
+              put_line(var_type);
+              case_tab_booleen := case_tab_booleen + 1;
+            else
+              put("Erreur : Type Incorrect");
+              New_Line;
             end if;
-            variables := 1;
 
-           --exit when last_1 = 0;
-           i_1 := last_1 + 1;
-         end loop;
-
-         while i_2 in 1..(first_1-2) loop
-           Find_Token
-             --(Source  => ligne(1..(first_1 - 2)),
-             (Source  => ligne(1..(first_1-2)),
-             Set     => virgule,
-             From    => i_2,
-             Test    => Outside,
-             First   => first_2,
-             Last    => last_2);
-
-
-           if To_String(var_type) = "Entier" then
-             p_cell_entier := new entiers.Cellule;
-             p_cell_entier.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
-             tableau_entiers(case_tab_entier) := p_cell_entier;
-             put_line(tableau_entiers(case_tab_entier).all.nom);
-             put("type variable entier: ");
-             put_line(var_type);
-             case_tab_entier := case_tab_entier + 1;
-           elsif To_String(var_type) = "Booleen" then
-             p_cell_booleen := new booleens.Cellule;
-             p_cell_booleen.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
-             tableau_bool(case_tab_booleen) := p_cell_booleen;
-             put_line(tableau_bool(case_tab_booleen).all.nom);
-             put("type variable bool: ");
-             put_line(var_type);
-             case_tab_booleen := case_tab_booleen + 1;
-           else
-             put("Erreur : Type Incorrect");
-             New_Line;
-           end if;
-
-           --exit when last_2 = 0;
-           i_2 := last_2 + 1;
+            --exit when last_2 = 0;
+            i_2 := last_2 + 1;
           end loop;
-       end if;
-       get_line(File,ligne,longueur);
-       SuprEspace(ligne,longueur);
-     end loop;
-     Close(File);  -- fermeture du fichier
+        end if;
+        get_line(File,ligne,longueur);
+        SuprEspace(ligne,longueur);
+      end loop;
+      Close(File);  -- fermeture du fichier
 
-   end blocDeclaration;
+    end blocDeclaration;
 
     procedure blocPrincipal(code_intermediaire : in String) is
     begin
-
-
-      loop
-        get_line(File,ligne,longueur);
-      exit when ligne(1..5) = "Debut";
-      end loop;
-
-      get_line(File,ligne,longueur);
-      --SuprEspace(ligne,longueur);
-
-      while ligne(1..3) /= "Fin" loop
-        if AFFECTATION then
-          affectation(ligne);
-        else if TANTQUE then
-          tantQue(code_intermediaire, ligne);
-        else
-          null; --Ne doit jamais passer ici ou lever une erreur
-        end if;
-      end loop;
+      null;
     end blocPrincipal;
 
     procedure affectation(ligne : in String) is
@@ -208,4 +190,4 @@ package body interversexec is
     end affichage;
 
 
-end interversexec;
+  end interversexec;
