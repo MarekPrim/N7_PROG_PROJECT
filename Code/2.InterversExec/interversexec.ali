@@ -18,7 +18,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U interversexec%b	interversexec.adb	69dc05ff OO PF PK IL
+U interversexec%b	interversexec.adb	ffd7e293 OO PF PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -69,7 +69,7 @@ D genericite.ads	20220117093544 4336e4f1 genericite%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
 D interversexec.ads	20220117101616 a88bb8fc interversexec%s
-D interversexec.adb	20220117153330 c157bd03 interversexec%b
+D interversexec.adb	20220117153654 575c5a6f interversexec%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
@@ -101,16 +101,16 @@ X 6 a-inteio.ads
 18K13*Integer_Text_IO[16|46] 21|3w10 3r36
 X 9 a-string.ads
 16K13*Strings 35e16 21|4w10 4r28 5r10 5r38 6r10 6r46 7r10 7r33 8r10 8r34
-31n32*Outside{31E9} 22|84r26 107r25
+31n32*Outside{31E9} 22|90r26 113r25
 X 10 a-strfix.ads
 18K21*Fixed 251e22 21|8w18 8r42
-102U14*Find_Token 22|80s13 102s12
-103a7 Source{string} 22|81r16 104r15
-104a7 Set{11|46A9} 22|82r15 105r14
-105i7 From{positive} 22|83r15 106r14
-106e7 Test{9|31E9} 22|84r15 107r14
-107i7 First{positive} 22|85r15 108r14
-108i7 Last{natural} 22|86r15 109r14
+102U14*Find_Token 22|86s13 108s12
+103a7 Source{string} 22|87r16 110r15
+104a7 Set{11|46A9} 22|88r15 111r14
+105i7 From{positive} 22|89r15 112r14
+106e7 Test{9|31E9} 22|90r15 113r14
+107i7 First{positive} 22|91r15 114r14
+108i7 Last{natural} 22|92r15 115r14
 X 11 a-strmap.ads
 38K21*Maps 411e21 21|7w18 7r41
 46A9*Character_Set<137A9> 22|56r25 57r28
@@ -119,79 +119,79 @@ X 11 a-strmap.ads
 X 12 a-strunb.ads
 76K21*Unbounded 491e26 21|5w18 5r46 6r18 6r54
 79R9*Unbounded_String<5|43R9> 474e14 22|47r17
-94V13*To_Unbounded_String{79R9} 22|92s26 119s39 129s40
-100V13*To_String{string} 22|113s23 117s15 127s18
+94V13*To_Unbounded_String{79R9} 22|98s26 125s39 135s40
+100V13*To_String{string} 22|119s23 123s15 133s18
 X 13 a-suteio.ads
 39K31*Text_IO 61e34 21|6w28 6r64
-55U14*Put_Line 22|93s14 125s14 135s14
+55U14*Put_Line 22|99s14 131s14 141s14
 X 15 a-textio.ads
 49K13*Text_IO 471e16 21|2w10 2r28
-52P9*File_Type 21|76r46 22|40r13 172r47
+52P9*File_Type 21|76r46 22|40r13 173r47
 53n23*In_File{53E9} 22|64r16
 92U14*Open 22|64s6
-98U14*Close 22|153s6
-166U14*New_Line 22|71s8 89s15 115s14 124s14 134s14 139s14 150s8
-168U14*Skip_Line 22|77s10
-171V13*End_Of_Line{boolean} 22|76s11
-242U14*Put 22|69s8 88s15 114s14 122s14 132s14 138s14 148s8
-244U14*Get_Line 22|67s8 146s8
-263U14*Put_Line 22|70s8 111s14 113s14 149s8 152s6
+98U14*Close 22|154s6
+166U14*New_Line 22|71s8 81s8 95s15 121s14 130s14 140s14 145s14
+168U14*Skip_Line 22|83s10
+171V13*End_Of_Line{boolean} 22|82s11
+242U14*Put 22|69s8 79s8 94s15 120s14 128s14 138s14 144s14
+244U14*Get_Line 22|67s8 77s8
+263U14*Put_Line 22|70s8 80s8 117s14 119s14 153s6
 X 16 a-tiinio.ads
-66U14*Put 22|121s14[6|18] 123s14[6|18] 131s14[6|18] 133s14[6|18]
+66U14*Put 22|127s14[6|18] 129s14[6|18] 137s14[6|18] 139s14[6|18]
 X 18 genericite.ads
 6+9 Element 22|7r37 10r38
 7V18 image{string} 22|7r55 10r56
 8k9*genericite 18e15 21|9w6 22|7r26 10r27
-10R9*Cellule 22|118r43[7] 128r45[10]
+10R9*Cellule 22|124r43[7] 134r45[10]
 11P9*P_Cellule(10R9[22|7]) 22|60r30[7] 61r32[10]
-13r7*nom{12|79R9} 22|119m32[7] 125r53[7] 129m33[10] 135r50[10]
+13r7*nom{12|79R9} 22|125m32[7] 131r53[7] 135m33[10] 141r50[10]
 16A9*Tableau_Variables(11P9[22|7])<integer> 22|14r29[7] 15r27[10]
 X 21 interversexec.ads
-11K9*interversexec 88l5 88e18 22|4b14 202l5 202t18
+11K9*interversexec 88l5 88e18 22|4b14 203l5 203t18
 25U14*intermediaire2execution 25>38 22|17b13 22l7 22t30
 25a38 code_intermediaire{string} 22|17b37 20r23 21r21
 35U14*creer_tableaux_vides 22|19s7 24b13 36l7 36t27
-45U14*blocDeclaration 45>30 22|20s7 38b14 155l8 155t23
+45U14*blocDeclaration 45>30 22|20s7 38b14 156l8 156t23
 45a30 code_intermediaire{string} 22|38b30 64r24
-55U14*blocPrincipal 55>28 22|21s7 157b15 160l9 160t22
-55a28 code_intermediaire{string} 22|157b29
-65U14*affectation 65>26 22|162b15 170l9 170t20
-65a26 ligne{string} 22|162b27 164r21
-76U14*tantQue 76>22 76>57 22|172b15 178l9 178t16
-76p22 code_intermediaire{15|52P9} 22|172b23
-76i57 ligne_debut{integer} 22|172b58
-84U14*affichage 22|195b15 199l9 199t18
-86U14*SuprEspace 86=25 86=50 22|68s8 147s8 180b15 193l9 193t19
-86a25 Chaine{string} 22|180b26 184r12 187m13 187r26
-86i50 Long{natural} 22|180b51 183r17 185m11 185r19 186r23
+55U14*blocPrincipal 55>28 22|21s7 158b15 161l9 161t22
+55a28 code_intermediaire{string} 22|158b29
+65U14*affectation 65>26 22|163b15 171l9 171t20
+65a26 ligne{string} 22|163b27 165r21
+76U14*tantQue 76>22 76>57 22|173b15 179l9 179t16
+76p22 code_intermediaire{15|52P9} 22|173b23
+76i57 ligne_debut{integer} 22|173b58
+84U14*affichage 22|196b15 200l9 200t18
+86U14*SuprEspace 86=25 86=50 22|68s8 78s8 181b15 194l9 194t19
+86a25 Chaine{string} 22|181b26 185r12 188m13 188r26
+86i50 Long{natural} 22|181b51 184r17 186m11 186r19 187r23
 X 22 interversexec.adb
-7K11 entiers[18|8] 8r7 14r21 60r22 118r35
-10K11 booleens[18|8] 11r7 15r18 61r23 128r36
-14a3 tableau_entiers{18|16A9[7]} 28m7 120m14 125r23
-15a3 tableau_bool{18|16A9[10]} 29m7 130m14 135r23
+7K11 entiers[18|8] 8r7 14r21 60r22 124r35
+10K11 booleens[18|8] 11r7 15r18 61r23 134r36
+14a3 tableau_entiers{18|16A9[7]} 28m7 126m14 131r23
+15a3 tableau_bool{18|16A9[10]} 29m7 136m14 141r23
 27i9 i{integer} 28r23 29r20
-40p6 File{15|52P9} 64m11 64r11 67r17 76r23 77r20 146r17 153m12 153r12
-43i6 first_1{positive} 85m26 92r52 101r27
-43i15 first_2{positive} 108m25 119r65 121r18 129r66 131r18
-44i6 last_1{natural} 86m26 92r63 97r22 98r19
-44i14 last_2{natural} 109m25 119r76 123r18 129r77 133r18 142r22 143r19
-45i6 i_1{natural} 79r16 83r26 98m12
-45i11 i_2{natural} 101r16 106r25 143m12
-46a6 ligne{string} 67m22 68m19 68r19 70r17 72r16 75r12 81r27 92r46 104r26
-. 111r23 119r59 129r60 146m22 147m19 147r19 149r17
-47r6 var_type{12|79R9} 92m14 93r23 113r33 117r25 127r28
-48i6 longueur{natural} 67m28 68m25 68r25 70r26 79r26 81r36 104r35 111r32
-. 146m28 147m25 147r25 149r26
-51i6 variables{integer} 91r16 95m13
-52i6 case_tab{integer} 120r30 125r39 126m14 126r26 130r27 135r36 136m14 136r26
-56a6 virgule{11|46A9} 105r25
-57a6 deuxPoints{11|46A9} 82r26
+40p6 File{15|52P9} 64m11 64r11 67r17 77r17 82r23 83r20 154m12 154r12
+43i6 first_1{positive} 91m26 98r52 107r27
+43i15 first_2{positive} 114m25 125r65 127r18 135r66 137r18
+44i6 last_1{natural} 92m26 98r63 103r22 104r19
+44i14 last_2{natural} 115m25 125r76 129r18 135r77 139r18 148r22 149r19
+45i6 i_1{natural} 85r16 89r26 104m12
+45i11 i_2{natural} 107r16 112r25 149m12
+46a6 ligne{string} 67m22 68m19 68r19 70r17 72r16 76r12 77m22 78m19 78r19
+. 80r17 87r27 98r46 110r26 117r23 125r59 135r60
+47r6 var_type{12|79R9} 98m14 99r23 119r33 123r25 133r28
+48i6 longueur{natural} 67m28 68m25 68r25 70r26 77m28 78m25 78r25 80r26 85r26
+. 87r36 110r35 117r32
+51i6 variables{integer} 97r16 101m13
+52i6 case_tab{integer} 126r30 131r39 132m14 132r26 136r27 141r36 142m14 142r26
+56a6 virgule{11|46A9} 111r25
+57a6 deuxPoints{11|46A9} 88r26
 58a6 debut{string}
-60p6 p_cell_entier{18|11P9[7]} 118m14 119r14 120r43
-61p6 p_cell_booleen{18|11P9[10]} 128m14 129r14 130r40
-164a7 a{string}
-181i7 i{integer} 183r13 184r19 186r20 190m11 190r16
-186i15 j{integer} 187r20 187r33
+60p6 p_cell_entier{18|11P9[7]} 124m14 125r14 126r43
+61p6 p_cell_booleen{18|11P9[10]} 134m14 135r14 136r40
+165a7 a{string}
+182i7 i{integer} 184r13 185r19 187r20 191m11 191r16
+187i15 j{integer} 188r20 188r33
 X 23 system.ads
 67M9*Address
 X 32 s-memory.ads

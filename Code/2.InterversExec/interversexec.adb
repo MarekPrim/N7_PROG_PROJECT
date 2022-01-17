@@ -77,7 +77,7 @@ package body interversexec is
        get_line(File,ligne,longueur);
        SuprEspace(ligne,longueur);
        put("Ligne traitée :");
-       put_line(ligne);
+       put_line(ligne(1..longueur));
        New_Line;
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
