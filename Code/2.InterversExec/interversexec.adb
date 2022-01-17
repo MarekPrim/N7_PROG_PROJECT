@@ -72,7 +72,13 @@ package body interversexec is
      exit when ligne(1..9) = "Programme";
      end loop;
 
+
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
+       get_line(File,ligne,longueur);
+       SuprEspace(ligne,longueur);
+       put("Ligne traitée :");
+       put_line(ligne);
+       New_Line;
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
@@ -143,11 +149,6 @@ package body interversexec is
            i_2 := last_2 + 1;
           end loop;
        end if;
-       get_line(File,ligne,longueur);
-       SuprEspace(ligne,longueur);
-       put("end line:");
-       put_line(ligne);
-       New_Line;
      end loop;
      put_line("coucou");
      Close(File);  -- fermeture du fichier
