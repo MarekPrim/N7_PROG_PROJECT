@@ -16,3 +16,4 @@ package genericite is
    Type Tableau_Variables is array(1..20) of P_Cellule;
 
 end genericite;
+---
