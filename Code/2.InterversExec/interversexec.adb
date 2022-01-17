@@ -78,9 +78,9 @@ package body interversexec is
      put_line(ligne(1..longueur));
      New_Line;
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
-       if End_Of_Line(File) then --Test si c'est la fin de la ligne
-         Skip_Line(File);
-       else
+       --if End_Of_Line(File) then --Test si c'est la fin de la ligne
+      --   Skip_Line(File);
+    --else
          put_line("recoucou");
          while i_1 in 1..longueur loop
             Find_Token
@@ -148,7 +148,7 @@ package body interversexec is
            exit when last_2 = 0;
            i_2 := last_2 + 1;
           end loop;
-       end if;
+       --end if;
        get_line(File,ligne,longueur);
        SuprEspace(ligne,longueur);
        put("Ligne suivante :");
