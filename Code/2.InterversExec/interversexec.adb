@@ -66,10 +66,10 @@ package body interversexec is
      loop
        get_line(File,ligne,longueur);
        SuprEspace(ligne,longueur);
-       put("start line");
-       put_line(ligne);
+       put("start line: ");
+       put_line(ligne(1..longueur));
        New_Line;
-     exit when ligne(1..9) = "Programme"
+     exit when ligne(1..9) = "Programme";
      end loop;
 
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
@@ -108,7 +108,7 @@ package body interversexec is
              First   => first_2,
              Last    => last_2);
 
-             put_line(ligne);
+             put_line(ligne(1..longueur));
 
              put_line(To_String(var_type));
              put("test");
@@ -146,7 +146,7 @@ package body interversexec is
        get_line(File,ligne,longueur);
        SuprEspace(ligne,longueur);
        put("end line:");
-       put_line(ligne);
+       put_line(ligne(1..longueur));
        New_Line;
      end loop;
      put_line("coucou");
