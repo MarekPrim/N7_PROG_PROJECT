@@ -89,16 +89,15 @@ package body interversexec is
      File : File_type;
 
      -----FILE------
-     F,B : positive ;
-     L,C : natural ;
+     first_1, first_2 : positive ;
+     last_1, last_2 : natural ;
      I,A : natural := 1;
-     S : String(1..100);
-     R : String(1..100);
-     TYP : Unbounded_String;
-     LENGTH : natural;
+     ligne : String(1..100);
+     var_type : Unbounded_String;
+     longueur : natural;
      --Type Tableau_Chaine is array(1..2) of String(100);
      --n : integer := 1 ;
-     var : integer;
+     variables : integer;
      casetab : integer := 1;
      Var_Entier : array(1..100) of Unbounded_String;
      Var_Booleen : array(1..100) of Unbounded_String;
