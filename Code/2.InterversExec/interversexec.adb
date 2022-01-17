@@ -110,9 +110,9 @@ package body interversexec is
              p_cell_entier.all.nom := To_Unbounded_String(ligne(first_2 .. last_2));
              tableau_entiers(case_tab) := p_cell_entier;
              case_tab := case_tab + 1;
-             put(first_2);
+             put(first_2,0);
              put(" - ");
-             put(last_2);
+             put(last_2,0);
              New_Line;
              put_line(p_cell_entier.all.nom);
              --put("ligne: ");
