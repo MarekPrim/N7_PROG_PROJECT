@@ -80,7 +80,7 @@ package body interversexec is
        --if End_Of_Line(File) then --Test si c'est la fin de la ligne
       --   Skip_Line(File);
     --else
-
+         i_1, i_2 := 1;
          variables := 0;
          while i_1 in 1..longueur loop
             Find_Token
