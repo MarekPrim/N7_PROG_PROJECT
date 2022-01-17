@@ -113,7 +113,7 @@ package body interversexec is
      while To_String(get_line(File)) /= "Début" loop --Parcours le fichier tant que l'on ne voit pas la fin
        get_line(File,ligne,longueur);
        put("test");
-       put_line(S);
+       put_line(ligne);
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
@@ -121,7 +121,7 @@ package body interversexec is
          SuprEspace(ligne,longueur);
          while i_1 in 1..longueur loop
             Find_Token
-              (Source  => S(1..longueur),
+              (Source  => ligne(1..longueur),
               Set     => DeuxPoints,
               From    => i_1,
               Test    => Outside,
@@ -130,7 +130,7 @@ package body interversexec is
 
             if variables=1 then
              var_type := To_Unbounded_String(S (first_1 .. last_1));
-             put_line(To_String(TYP));
+             put_line(To_String(var_type));
             end if;
             variables := 1;
 
