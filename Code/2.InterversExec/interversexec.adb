@@ -53,9 +53,6 @@ package body interversexec is
 
   begin
 
-  nombre_entiers : integer;
-  nombre_booleens : integer;
-
    procedure intermediaire2execution(code_intermediaire : in String) is
    begin
         creer_tableaux_vides;
