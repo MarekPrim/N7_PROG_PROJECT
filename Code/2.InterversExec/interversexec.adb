@@ -62,25 +62,19 @@ package body interversexec is
 
    begin
      Open(File,In_File,code_intermediaire); --Ouvre le fichier sous le nom "File"
-
-     debut := get_line(File)(1..5);
-     put("Debut - ");
-     put(debut);
-     New_Line;
-     debut := get_line(File)(1..5);
-     put("Debut - ");
-     put(debut);
-     New_Line;
      --loop
 
      --exit when
      --end loop;
      get_line(File,ligne,longueur);
+     SuprEspace(ligne,longueur);
+     put("start line");
+     put_line(ligne);
+     New_Line;
      while ligne(1..5) /= "Debut" loop --Parcours le fichier tant que l'on ne voit pas la fin
        if End_Of_Line(File) then --Test si c'est la fin de la ligne
          Skip_Line(File);
        else
-         SuprEspace(ligne,longueur);
          while i_1 in 1..longueur loop
             Find_Token
               (Source  => ligne(1..longueur),
@@ -102,12 +96,18 @@ package body interversexec is
 
          while i_2 in 1..(first_1-2) loop
            Find_Token
-             (Source  => ligne(1..first_1-2),
+             --(Source  => ligne(1..(first_1 - 2)),
+             (Source  => ligne(1..longueur),
              Set     => virgule,
              From    => i_2,
              Test    => Outside,
              First   => first_2,
              Last    => last_2);
+
+             put_line(ligne);
+
+             put_line(To_String(var_type));
+             put("test");
 
            if To_String(var_type) = "Entier" then
              p_cell_entier := new entiers.Cellule;
@@ -139,6 +139,10 @@ package body interversexec is
           end loop;
        end if;
        get_line(File,ligne,longueur);
+       SuprEspace(ligne,longueur);
+       put("end line:");
+       put_line(ligne);
+       New_Line;
      end loop;
      put_line("coucou");
      Close(File);  -- fermeture du fichier
