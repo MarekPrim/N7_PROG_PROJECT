@@ -140,7 +140,17 @@ package body interversexec is
 
     procedure blocPrincipal(code_intermediaire : in String) is
     begin
-        null;
+        while ligne(1..3) /= "Fin" loop
+
+          if AFFECTATION then
+            affectation(ligne);
+          else if TANTQUE then
+            tantQue(code_intermediaire, ligne);
+          else
+            null; --Ne doit jamais passer ici ou lever une erreur
+          end if;
+
+        end loop;
     end blocPrincipal;
 
     procedure affectation(ligne : in String) is
